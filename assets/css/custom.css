@@ -19,64 +19,6 @@ body {
 }
 
 /* =================================================================
-   Starfield Animation Background
-   ================================================================= */
-.stars-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.stars-container::before,
-.stars-container::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    box-shadow:
-        100px 100px white, 200px 150px white, 300px 50px white,
-        400px 200px white, 500px 100px white, 600px 250px white,
-        700px 50px white, 800px 150px white, 900px 200px white,
-        1000px 100px white, 50px 300px white, 150px 350px white,
-        250px 400px white, 350px 300px white, 450px 350px white,
-        550px 400px white, 650px 300px white, 750px 350px white,
-        850px 400px white, 950px 300px white, 1050px 350px white,
-        100px 500px white, 200px 550px white, 300px 600px white,
-        400px 500px white, 500px 550px white, 600px 600px white,
-        50px 200px rgba(255,255,255,0.6), 150px 250px rgba(255,255,255,0.6),
-        250px 300px rgba(255,255,255,0.6), 350px 200px rgba(255,255,255,0.6),
-        450px 250px rgba(255,255,255,0.6), 550px 300px rgba(255,255,255,0.6),
-        650px 200px rgba(255,255,255,0.6), 750px 250px rgba(255,255,255,0.6),
-        850px 300px rgba(255,255,255,0.6), 950px 200px rgba(255,255,255,0.6);
-    animation: stars-twinkle 3s infinite ease-in-out;
-}
-
-.stars-container::after {
-    animation-delay: 1.5s;
-    box-shadow:
-        120px 120px white, 220px 170px white, 320px 70px white,
-        420px 220px white, 520px 120px white, 620px 270px white,
-        720px 70px white, 820px 170px white, 920px 220px white,
-        1020px 120px white, 70px 320px white, 170px 370px white,
-        270px 420px white, 370px 320px white, 470px 370px white,
-        570px 420px white, 670px 320px white, 770px 370px white,
-        870px 420px white, 970px 320px white, 1070px 370px white;
-}
-
-@keyframes stars-twinkle {
-    0%, 100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.3;
-        transform: scale(0.8);
-    }
-}
-
-/* =================================================================
    Custom Gradient Text
    ================================================================= */
 .gradient-text {
