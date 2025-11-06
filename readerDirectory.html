@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AstroVerse - Find Your Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3713ec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#131022",
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 dark:border-white/10 px-4 sm:px-8 md:px-16 py-3 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center gap-4 text-black dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AstroVerse</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-center items-center gap-9">
+<a class="text-black dark:text-white text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-primary dark:text-primary text-sm font-bold leading-normal" href="#">Readings</a>
+<a class="text-black dark:text-white text-sm font-medium leading-normal" href="#">Blog</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-white/10 text-black dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Log In</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZ1aJhiBgAAQDPvEBPGHte3-B_0oWfRBIZgZlzDmSdkANirPc0vHat3nFMtEsuhYRTWQxqOk6wSpjEnwx6AdKSHWomrOIJIwPfh2gIIpBuZTcNxAiPEsg3tZLc6QCH8JCuhDwy8yAJYx1v7tZcSLxfayAgVKAmMBf-nQL-H3Ulto8aMKNTLJAATU4Edx4I9FJpMA00OTt78PYLpKqu7SAP42pv6ZQXo2c6cXGswNqUzRAU3RmzraMQxmaSZ0kS8z0cUocOwnbZcXvM");'></div>
+</div>
+</header>
+<main class="w-full max-w-7xl mx-auto px-4 sm:px-8 py-10">
+<div class="flex flex-wrap justify-between gap-4 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-black dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Find Your Guide</p>
+<p class="text-gray-600 dark:text-[#a19db9] text-base font-normal leading-normal">Discover and connect with trusted astrologers and psychic readers on AstroVerse.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 mt-6">
+<aside class="w-full md:w-1/4 lg:w-1/5 flex-shrink-0">
+<div class="sticky top-28 space-y-6">
+<div class="px-4 py-3 bg-gray-100 dark:bg-[#1C182F] rounded-xl">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-[#a19db9] flex bg-gray-200 dark:bg-[#2b2839] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-black dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-200 dark:bg-[#2b2839] focus:border-none h-full placeholder:text-gray-500 placeholder:dark:text-[#a19db9] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search by name..." value=""/>
+</div>
+</label>
+</div>
+<div class="bg-gray-100 dark:bg-[#1C182F] rounded-xl">
+<h3 class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4">Filter By</h3>
+<div class="flex flex-col p-4">
+<details class="flex flex-col border-t border-t-gray-300 dark:border-t-[#3f3b54] py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Specialization</p>
+<div class="text-black dark:text-white group-open:rotate-180 transition-transform"><span class="material-symbols-outlined">expand_more</span></div>
+</summary>
+<div class="space-y-2 pt-2">
+<label class="flex items-center gap-2"><input class="form-checkbox rounded bg-gray-200 dark:bg-[#2b2839] border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50" type="checkbox"/><span class="text-gray-600 dark:text-[#a19db9] text-sm">Tarot Reading</span></label>
+<label class="flex items-center gap-2"><input class="form-checkbox rounded bg-gray-200 dark:bg-[#2b2839] border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50" type="checkbox"/><span class="text-gray-600 dark:text-[#a19db9] text-sm">Natal Charts</span></label>
+<label class="flex items-center gap-2"><input class="form-checkbox rounded bg-gray-200 dark:bg-[#2b2839] border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50" type="checkbox"/><span class="text-gray-600 dark:text-[#a19db9] text-sm">Numerology</span></label>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-gray-300 dark:border-t-[#3f3b54] py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Availability</p>
+<div class="text-black dark:text-white group-open:rotate-180 transition-transform"><span class="material-symbols-outlined">expand_more</span></div>
+</summary>
+<div class="space-y-2 pt-2">
+<label class="flex items-center gap-2"><input class="form-radio bg-gray-200 dark:bg-[#2b2839] border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50" name="availability" type="radio"/><span class="text-gray-600 dark:text-[#a19db9] text-sm">Available Now</span></label>
+<label class="flex items-center gap-2"><input class="form-radio bg-gray-200 dark:bg-[#2b2839] border-gray-300 dark:border-gray-600 text-primary focus:ring-primary/50" name="availability" type="radio"/><span class="text-gray-600 dark:text-[#a19db9] text-sm">Online</span></label>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-gray-300 dark:border-t-[#3f3b54] py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Price Range</p>
+<div class="text-black dark:text-white group-open:rotate-180 transition-transform"><span class="material-symbols-outlined">expand_more</span></div>
+</summary>
+<div class="pt-4 pb-2">
+<input class="w-full h-2 bg-gray-300 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer" max="100" min="0" type="range"/>
+<div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-2"><span>$1/min</span><span>$10/min</span></div>
+</div>
+</details>
+<details class="flex flex-col border-t border-t-gray-300 dark:border-t-[#3f3b54] py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Rating</p>
+<div class="text-black dark:text-white group-open:rotate-180 transition-transform"><span class="material-symbols-outlined">expand_more</span></div>
+</summary>
+<div class="flex items-center justify-center gap-1 pt-3 text-2xl text-yellow-400">
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer">star</span>
+<span class="material-symbols-outlined cursor-pointer text-gray-400 dark:text-gray-600">star_border</span>
+</div>
+</details>
+</div>
+<div class="flex flex-col sm:flex-row gap-2 p-4 pt-0">
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">Apply</button>
+<button class="flex-1 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-white/10 text-black dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">Reset</button>
+</div>
+</div>
+</div>
+</aside>
+<div class="w-full md:w-3/4 lg:w-4/5">
+<div class="flex justify-between items-center mb-6">
+<p class="text-gray-600 dark:text-[#a19db9]">Showing 8 of 124 readers</p>
+<div class="relative">
+<select class="form-select appearance-none bg-gray-100 dark:bg-[#1C182F] border-none text-black dark:text-white rounded-lg pl-4 pr-10 py-2 text-sm focus:ring-primary focus:border-primary">
+<option>Sort by: Top Rated</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-[#a19db9] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-gray-100 dark:bg-[#1C182F] rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:ring-2 hover:ring-primary/50 transition-all duration-300">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Celeste Rivers, a woman with dark hair smiling warmly" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_xoe8FX7uw7AFtaiaVIXMRhhqKBj3-jaTpNRNea6P0bZAzzUNyPoNXOynQYrEEJMbGjJV93i7NV72HFQ96EFBjS9eKKz-I9BQkdWXrfeYxR0P2pbe9B6DcGyRNJMRtqQrEzJ10nN4DWfD8KWiVQ1IDwrTH97QrBI_KILy-tMHtE5mGxPiXduI-9De0GnxSdbK9JFEEgdrIDM56K0Qes5upvJF4LqYTozFtueIXcx8j9xVHLd0lKr2hAF-4RzZtXR3mwimJNJyEH6T");'></div>
+<span class="absolute bottom-1 right-1 block h-4 w-4 rounded-full bg-green-500 ring-2 ring-white dark:ring-[#1C182F]"></span>
+</div>
+<h4 class="text-lg font-bold text-black dark:text-white">Celeste Rivers</h4>
+<span class="text-sm bg-primary/20 text-primary font-medium py-1 px-3 rounded-full my-2">Natal Chart Expert</span>
+<div class="flex items-center gap-1 text-yellow-400 my-2">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star_half</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">4.9 (150+)</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                View Profile
+                            </button>
+</div>
+<div class="bg-gray-100 dark:bg-[#1C182F] rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:ring-2 hover:ring-primary/50 transition-all duration-300">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Orion Vance, a man with glasses and a thoughtful expression" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAKMW8RfX1w_jS54zdmavJPuI8bUJe7MS9LdUL9ZODHpaVhRGA6gAUHw1W30qndatVccZbTwpyonaMfWZVRfEC-eUnhpy12UIBt-Ib05gIy3lIrZLyBtNeFoln12r2qUJYFjPUloKyX1tyEd5fyKgrWN4Pxoa_iGn4SDc6udgYLu40J0zyu-lYA1ekYij4ZBc70r6eA8lIy82uNzRbyY-v_9YXsm0M1dx2yQRKVplZYENHcQcXIHZmwbH5vz7YjfmbbV6PWim-jcZY7");'></div>
+<span class="absolute bottom-1 right-1 block h-4 w-4 rounded-full bg-green-500 ring-2 ring-white dark:ring-[#1C182F]"></span>
+</div>
+<h4 class="text-lg font-bold text-black dark:text-white">Orion Vance</h4>
+<span class="text-sm bg-purple-500/20 text-purple-400 font-medium py-1 px-3 rounded-full my-2">Tarot Reader</span>
+<div class="flex items-center gap-1 text-yellow-400 my-2">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">5.0 (212)</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                Chat Now
+                            </button>
+</div>
+<div class="bg-gray-100 dark:bg-[#1C182F] rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:ring-2 hover:ring-primary/50 transition-all duration-300">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Luna Seraphina, a woman with long wavy hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIL-PKlGYoQ2o-btILcq2fbtoHfWlAkqxukl609KIe46k6JmSj9BAOaQJQ3hIMlDBcR-cA0gaBayt-ID9tFmXT-6NlZ1oJ32AYlYMAY8WmoUFzNhPhP3DDFdaPSPS2KuM6-k0nTm2s8CAIn-gw-z8lnuuJ_xOPd3V7rMr_W8YN6irkaMsEwrDVPDOLPRu_MzW4iWvEzy5aRecel3rZmnF9S9Lp38g81YRBNcf3JRd9BcnvmCgOeLEdohEDEwsGcXJ4_-rwzDf0jmt5");'></div>
+<span class="absolute bottom-1 right-1 block h-4 w-4 rounded-full bg-gray-400 ring-2 ring-white dark:ring-[#1C182F]"></span>
+</div>
+<h4 class="text-lg font-bold text-black dark:text-white">Luna Seraphina</h4>
+<span class="text-sm bg-blue-500/20 text-blue-400 font-medium py-1 px-3 rounded-full my-2">Numerologist</span>
+<div class="flex items-center gap-1 text-yellow-400 my-2">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star_border</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">4.2 (98)</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-300 dark:bg-white/10 text-black dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                View Profile
+                            </button>
+</div>
+<div class="bg-gray-100 dark:bg-[#1C182F] rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:ring-2 hover:ring-primary/50 transition-all duration-300">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Jasper Stone, a man with a beard looking friendly" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZOt-TkZ2F0ODtP0NodbSsjdgFawnlLOsGdh7AI-lSjy5i00r3jzooXbelmnWRpCdUrXFjyspAbvn9Z9blX-iX0OnFnjRU0B1_cDz9X9UEk6n9_S-pktsxwrw1q9A6hL_ehntlzXyHwCyWxOaJ7yHbr4qkpV0NCH-wFBt07Xg0KcXc4e239l6dpoh0dWfu-7tsUXcFokiDUbbini7VOTsxpJgA9VafzF_aul2scDFyUj7r6FYotCcTfdXMwArfa7LI-4Hxiz2f_6ty");'></div>
+<span class="absolute bottom-1 right-1 block h-4 w-4 rounded-full bg-gray-400 ring-2 ring-white dark:ring-[#1C182F]"></span>
+</div>
+<h4 class="text-lg font-bold text-black dark:text-white">Jasper Stone</h4>
+<span class="text-sm bg-purple-500/20 text-purple-400 font-medium py-1 px-3 rounded-full my-2">Tarot Reader</span>
+<div class="flex items-center gap-1 text-yellow-400 my-2">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star_half</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">4.7 (301)</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-300 dark:bg-white/10 text-black dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                View Profile
+                            </button>
+</div>
+<div class="bg-gray-100 dark:bg-[#1C182F] rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:ring-2 hover:ring-primary/50 transition-all duration-300">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Aria Meadow, a woman with blonde hair in a natural setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxp1hSEDlrwU8cyoJ0pmKejOQ33uNdmuNbygvxfQiFzihD9UCuD1liojYoYZquQODF8_MlKu2IFFGt0IwKYATGSxUlWoWLEZO_IvzcrmUJ8Kk-O89-iZK9iFzL0t7nYf3Y2Xfc9dSPpvhuuOVDC-4vSFx8CTokVOSUmhPPRaLZiiL8mx3o2nzgg9FFizJcCdJx0zosDxQPVSatEjtWaiQINEmYQWgLadqta8PHCGA9af7dOhcX0-JDgBQYe2MFB428LtCsevPLPBtb");'></div>
+<span class="absolute bottom-1 right-1 block h-4 w-4 rounded-full bg-green-500 ring-2 ring-white dark:ring-[#1C182F]"></span>
+</div>
+<h4 class="text-lg font-bold text-black dark:text-white">Aria Meadow</h4>
+<span class="text-sm bg-primary/20 text-primary font-medium py-1 px-3 rounded-full my-2">Natal Chart Expert</span>
+<div class="flex items-center gap-1 text-yellow-400 my-2">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">5.0 (89)</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                Chat Now
+                            </button>
+</div>
+<div class="bg-gray-100 dark:bg-[#1C182F] rounded-xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:ring-2 hover:ring-primary/50 transition-all duration-300">
+<div class="relative mb-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24" data-alt="Leo Phoenix, a confident looking man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqKbt6zts_G0bSl6PwUV6eVQjwFjjNR7aMC2WOSn5A90-xm3e4kQUDqT_hRxlCa0di_2hN3hQhoGHSDG7J2bl8b74TZd6Dmz7p3--MrwKYNKdAIeARZ52IDPUpReOOI9BxNMOpSowf9_dL4Iz0KTYLbMC8N3MhquQYatxUHa9ciuCu3v50mtfGJc5i5vinryo0Aajj0Ae3w27JC4Xg10Qi4rq04nPa1p2oxWlSAsM-WMIIU8sAfbLx9QQoygQMqlOk6wXsSujb5QUu");'></div>
+<span class="absolute bottom-1 right-1 block h-4 w-4 rounded-full bg-gray-400 ring-2 ring-white dark:ring-[#1C182F]"></span>
+</div>
+<h4 class="text-lg font-bold text-black dark:text-white">Leo Phoenix</h4>
+<span class="text-sm bg-blue-500/20 text-blue-400 font-medium py-1 px-3 rounded-full my-2">Numerologist</span>
+<div class="flex items-center gap-1 text-yellow-400 my-2">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star_half</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 ml-1">4.6 (112)</span>
+</div>
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-300 dark:bg-white/10 text-black dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                View Profile
+                            </button>
+</div>
+</div>
+<nav class="flex items-center justify-center gap-4 mt-10">
+<button class="flex items-center justify-center size-10 rounded-lg bg-gray-100 dark:bg-[#1C182F] text-black dark:text-white"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-primary text-white">1</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-gray-100 dark:bg-[#1C182F] text-black dark:text-white">2</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-gray-100 dark:bg-[#1C182F] text-black dark:text-white">3</button>
+<span class="text-gray-500 dark:text-gray-400">...</span>
+<button class="flex items-center justify-center size-10 rounded-lg bg-gray-100 dark:bg-[#1C182F] text-black dark:text-white">12</button>
+<button class="flex items-center justify-center size-10 rounded-lg bg-gray-100 dark:bg-[#1C182F] text-black dark:text-white"><span class="material-symbols-outlined">chevron_right</span></button>
+</nav>
+</div>
+</div>
+</main>
+</div>
+</body></html>

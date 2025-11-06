@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head><meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AstroVerse - Daily Horoscope</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3713ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 md:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] font-display">AstroVerse</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-white text-sm font-bold leading-normal border-b-2 border-primary pb-1" href="#">Horoscopes</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Birth Chart</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Learn</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal" href="#">Blog</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-colors">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</div>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<main class="flex flex-col gap-8 py-10">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em] font-display">Your Daily Horoscope</p>
+<p class="text-white/60 text-base font-normal leading-normal">Select your zodiac sign to reveal what the stars have in store for you today.</p>
+</div>
+</div>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-6">
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-transparent">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Aries zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRIzaGeh1r0MF_UW80fXRNxeVUXl_xyRn-oo7j6ez3TcJJ_flUoo_UtJbz42QKFt1qBMasYKZ-aXE_X3jhGtbayLkV7qNtGvYYKK4TWiKGeEMCDsonFEfQ8k-7Ogvin6MK7g8Sbvpu5roxgInt65K0M8HlcQXxnrszjpEcJRjQuz0cUp5yS08RCX1xAf6_rXsLsFRm6Qc8MMnwPb95DAbUKCLqmRwpzar7dHD6TN0E9u1aubidM-BNyOoKreIXVodGp5DS7Awv5CCY");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Aries</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Mar 21 - Apr 19</p>
+</div>
+</div>
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-primary bg-primary/20">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Taurus zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDi09WOubyvavuow1oRP8jUDNCosohoH4kKSz-M5wJoYl09769JEHF2xz2WIiYolffjpiNqG27nVKgbhx5-6VrZs8L6xqLf4gJjl_juBb-Yhunbp9kec2CJGKi2ad1Gi7lWQrx2vm_aLF6O-XDBURftFJoPg8HEICxXGf5iO2znZBD_kxphu0PUqfzCtC2q4dWiTYyCEmgxHgL5r33SFimnLxeZ510RTt2KkVJUf0Y_LpKGH3SmoVvoS5TDla8-GVzvP1hmo2GUvQ6D");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Taurus</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Apr 20 - May 20</p>
+</div>
+</div>
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-transparent">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Gemini zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOaHZAMAqiPPpopQQ6Kw9SOZQ8GMJ9lrxxUjhPSSO2ZlcWY8HlfuwM45xWOuWs9peaZ4q5v-PAUVQqmz6J66sQ_8MnjxFCEnrkQ1G61VRnH6pS-D0nTN6uVAi2KUtDfByYYj75yqbqUIJOPQgW_SsiUa1RGCg8_p2R6BvtudrM8JlyMcG35Rmdj_B9t7cp93ygbKiEzb3z6gql98NajPxMZ90wd5Peb5w8lcVuLzPLdy8oWn1LHp9cDo-AhUB1noduileXqREs0_0F");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Gemini</p>
+<p class="text-white/60 text-sm font-normal leading-normal">May 21 - Jun 20</p>
+</div>
+</div>
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-transparent">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Cancer zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCqpp7HUbI7Px7AbCDom6_66qwxyaW68MFK-SrEJ19cG5INUgu4B7HE9cKyR7OYVaFUsMBz_-jVFOEbPTowIbIHqR6lr3i3MKrdclHRHfKF5kbLW8MbGteR-SEiAvuyIi_WlbcYr8Dd-xkERH8lptbCbEUJcFe5UH0nr1XiRZhUwipCbYrTfdWuIm09HRMG0NYExz8fHtpGnWBk_RE_IjNNryI-tRozSHMTcELhxOvdmaUa3ZLQBD7JL9kMomMveYYLpIHFX-KmSK_h");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Cancer</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Jun 21 - Jul 22</p>
+</div>
+</div>
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-transparent">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Leo zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGIqyovAm7dJKq4srumg7XMujdPi-mPb2vGsDajoodiCR2ja2v0Cw369BjKNC6DlbBb99V9BSRH1VQ8d1nfE_yJJiJ3hOJFtzgiCpsPBcoa4J_3Y8v0-DpEmeIipUoPud5hY3tn7ZK-gzfr75bKrSamgYQjmOiGkZiMe63sQJwdqtf64_p0gFCBgKKz7OHYiRvnxOnLN6Csgm88CzJF_T_gdlaneHVuxv8ipvwdn3jVJDgD3XaiIPUNYItXhBvrnDr74w77LYwZVOY");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Leo</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Jul 23 - Aug 22</p>
+</div>
+</div>
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-transparent">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Virgo zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBBEdinmuj_DiRLnU3wNiTvSMN4OIPUmYZtNAQ9b4o4EFwjzMukvaYnBJEGJxGZdY3Fo7Iwj8iw3_mzYSUZEBOcAyetMtBXMAWcsB7N4jml7EQjA71UivNbYXIFnPK9QQ7AXG62SCBRgdVDPdmgZTUGNNdMUYT7PNklb_JZVWdC_tMTNfelzIsL3i5ztCS-23H6dyLD_UBptef2Tle_3YXm-E2EvAtDna4sg07bsVR8JT6Js00Xcx1N31ZlZfjEkPuvPSzBjQMuuWm");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Virgo</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Aug 23 - Sep 22</p>
+</div>
+</div>
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-transparent">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Libra zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHETxoHw55cZ-sDcI7kJj46CxKz_AD_BEZyXEGjtwawM_YSZz2jZNfCawJOvoDRK2WQjG3-UMXcQZyIPFjoSjbjdvnf9vf6xl5OxaCkYIE3Y15bHuf22YInfOUArNlhZ01XrnFXqAYsggtdpZNmBXUUTo8y_OIU3yd-w9hnQjg2oTCU3O3bcjD9mMSWupeomXTPmcKiZHfCtevuPwYE3oOT60VBrmmupPp8T10yiMTD0nFsKKvRDhmuo_o1CulIQD1vnKmOoTOSSQO");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Libra</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Sep 23 - Oct 22</p>
+</div>
+</div>
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-transparent">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Scorpio zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtTgHNemZUM_Dwr8yuZEI2XwgcGU4F1RyNfwNZaCoypLzKFt-Wrf8WvrA5YblOHaPMSlWRF9duzvVeLIf6M7mkvP5rP_WyE6ciwoxBgkpdty2MoXqtUuoQW2DctPdb4cUO7RsegLu7Lx8OAVAtDC27wubOpWtcVdRLcOx8S55R2FI3pmzUY3HI1ERapSIOwBKP_DPVf3Fe51PllnjK-b7oTbtbhe1WciNHfw_1WObfzkc9XTa6j8uFRT8Nb5cbAT__o6vQRZ3L1e4D");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Scorpio</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Oct 23 - Nov 21</p>
+</div>
+</div>
+<div class="flex h-full flex-1 cursor-pointer flex-col gap-3 text-center rounded-lg min-w-24 p-2 transition-colors hover:bg-white/5 border-2 border-transparent">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full flex flex-col self-center w-full" data-alt="Sagittarius zodiac symbol" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcrcuMh3vsI2MSfXECr861mLzui1gjwu4UY9D6-r4GuchTPuDf9QjQQcAhP9DGUVZW-_eLJ3kVpXbOPefczIOliRX4Ql8PHxMo62WVt3v2h-vTSm6JewnJxZTPmTnudVMnLbrVC5Yq-eK8BE7C5vrykKK7Q75LwHPtOVh0DVKaKj7p54RtVGb6wy4A0HHD34ZeswpeaDxeJ1ustKIgaOEVB0KHH-FApx1EjQsx16Bb-DMaIEFORo_hPjEK_ImAXtRW3QSUqwAT2oEd");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Sagittarius</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Nov 22 - Dec 21</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-white/5 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-background-dark has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-white text-white/60 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">Daily</span>
+<input checked="" class="invisible w-0" name="timeframe-selector" type="radio" value="Daily"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-background-dark has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-white text-white/60 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">Weekly</span>
+<input class="invisible w-0" name="timeframe-selector" type="radio" value="Weekly"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 has-[:checked]:bg-background-dark has-[:checked]:shadow-[0_0_4px_rgba(0,0,0,0.1)] has-[:checked]:text-white text-white/60 text-sm font-medium leading-normal transition-colors">
+<span class="truncate">Monthly</span>
+<input class="invisible w-0" name="timeframe-selector" type="radio" value="Monthly"/>
+</label>
+</div>
+</div>
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white/5 p-4 @xl:flex-row @xl:items-start @xl:p-6">
+<div class="w-full @xl:w-1/3 bg-center bg-no-repeat aspect-square @xl:aspect-auto @xl:h-full bg-cover rounded-lg" data-alt="Abstract mystical illustration representing Taurus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTtbN0IuBTRhedyhWFPwbIpHeBkQJU9Q4aluPNzUBxCQrliOTvBZ1gKCBtMd1fq3YdzWP4xeVH3BOCW5lY5gLlK9fkWo0Ijq8IYg8wH7Mxuc5BoUwsdS9CKWfJ1iPWASMde21vEPud37LcND4sZpB90GByDLimgZv189w7zSoKbCqR40fDhnvcvpamTnd_qIblZwqCKXsfnR4OOwwOCSHKPxZtT6MEzEaHYZ3NcVAb7uFTo7jU6oLxjHF8zf82-pNOa4tJQNfuGsW0");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-4 py-4 @xl:px-6">
+<div class="flex flex-col gap-1">
+<p class="text-white text-2xl font-bold leading-tight tracking-[-0.015em] font-display">Taurus Horoscope</p>
+<p class="text-white/60 text-sm font-normal leading-normal">October 26, 2023</p>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">Love</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">Career</span>
+<span class="rounded-full bg-primary/20 px-3 py-1 text-xs font-medium text-primary">Wellness</span>
+</div>
+<p class="text-white/80 text-base font-normal leading-relaxed">
+                                        Today, you'll feel a surge of creative energy. It's an excellent day to tackle artistic projects or brainstorm new ideas at work. Your intuition is heightened, so trust your gut feelings, especially in personal relationships. A conversation in the evening could lead to an exciting opportunity. Stay open and embrace the flow of inspiration.
+                                    </p>
+<button class="flex mt-2 min-w-[84px] max-w-[120px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-medium leading-normal hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-base">share</span>
+<span class="truncate">Share</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-10 border-t border-solid border-white/10 px-10 py-6 text-center">
+<p class="text-white/60 text-sm">© 2023 AstroVerse. All Rights Reserved.</p>
+<div class="flex justify-center gap-4 mt-4">
+<a class="text-white/60 hover:text-white text-sm" href="#">About Us</a>
+<a class="text-white/60 hover:text-white text-sm" href="#">Contact</a>
+<a class="text-white/60 hover:text-white text-sm" href="#">Privacy Policy</a>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

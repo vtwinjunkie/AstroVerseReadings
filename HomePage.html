@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AstroVerse - Modern Astrology Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3713ec",
+              "background-light": "#f6f6f8",
+              "background-dark": "#131022",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 py-5">
+<div class="layout-content-container flex w-full max-w-[1100px] flex-1 flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-6 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AstroVerse</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Horoscopes</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Readers</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Birth Chart</a>
+<a class="text-white/80 hover:text-white transition-colors text-sm font-medium leading-normal" href="#">Blog</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col gap-12 sm:gap-16 md:gap-20">
+<section class="@container mt-8">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center" data-alt="A celestial background with stars and nebulae" style='background-image: linear-gradient(rgba(19, 16, 34, 0.6) 0%, rgba(19, 16, 34, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDuwmd-JFBgqA5WkanPHyNUVl2RE10K7GGiyhAOtzLggSZtu0H1sHGHc9vCIzNaZNSsDzyEQfpgAATt7IL0a136B3XYjP5Q3dtdcZw9GWB-d_g6JRaljNuU7cHmW_H3_M50Vf4Rn7HenzBdXNA3MNC1d58Us1Pcr5y9JEut6vU4WlNC90R1ouGk_esF_hO1A21faSderjMJ3Kr64hRK1GWgztS_VuGASjU_3VdnFs-6AzHVge6RPgpmFBox4qy9ws9cYONKew8-TsRh");'>
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Explore the AstroVerse</h1>
+<h2 class="text-white/80 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal max-w-xl">Unlock the secrets of the stars and navigate your life with guidance from the universe.</h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Get Your Free Horoscope</span>
+</button>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Daily Horoscopes</h2>
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex flex-nowrap items-stretch p-4 gap-4">
+<div class="flex h-full flex-shrink-0 flex-col gap-4 rounded-lg w-40 cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col transition-transform group-hover:scale-105" data-alt="Abstract image for Aries" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHwRg8L0etiF1vRLruJ1nkXYgQmSF0yWLRUGLjFcmIfFzf2huhC0ccFhxTWcMzWPykvC17iDC8GkGbLwkXzPhvXYIm3TfEoNcI1UJdH9a8vX05YZNvFcj_L6wjIB9FOY8ahCTr0tnAPlv889ClcSEeYSHRta6TX221C2KjJGbbc-o2gfeHoMEdcB1Fdw-YPHybUv0Nx24TcdkR4szEUeQNHt47waM8y9BIxhBAWWwlSvF5CFbsyvSeaqy29gKvpeT-uodWrxkfJXD2");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Aries</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Mar 21 - Apr 19</p>
+</div>
+</div>
+<div class="flex h-full flex-shrink-0 flex-col gap-4 rounded-lg w-40 cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col transition-transform group-hover:scale-105" data-alt="Abstract image for Taurus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlXtVtyYAW7AO9GkgZuqrilW7Yk-6Le_mXcwESkF7zFuZQDQRL0FnyJDlRhmQz6D9ZdwqZFkds7whN5uTBTSy_Z1bo6SlJdYDquZ2V49NzYFALTdnQWYJnumnzsv4GmbfJNSqfai8N90tbAJskK5R-Q-URvWMQ4aL3fpY4kbSvyCxb7stLFJ8mT5K740cRdzAOTUA8hzTkjaOcAk0-a8ON7D4yReidLDJcAVc9sTK4dqRB4kgKZRUPJZyZryZFLrtiJh8TY-HnjWJd");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Taurus</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Apr 20 - May 20</p>
+</div>
+</div>
+<div class="flex h-full flex-shrink-0 flex-col gap-4 rounded-lg w-40 cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col transition-transform group-hover:scale-105" data-alt="Abstract image for Gemini" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9LClC4WZbpIbxHcAwwn5-usqsgztLcLgTOIrisa3uytyLfHvW7x22RFTKqyv0YORBCH7G_tmfiAVzBEZcvCN3umORWRQnz3TXmr1JnhtY6_dG8XzDW7CoxjULtLAwa4INq50cO8nePzxkbA93V4AqfXqc7KqaCz1Axg00F02VyGWaNaZN9ekV0dXFbMcCIgoDEUt4dbeoN6zy4w8fngjE3gtkCSUNoG582Fwd8ZmsHcrVtiETCcFlEiFkMF3s5X7XsxV1ZRWEb3fp");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Gemini</p>
+<p class="text-white/60 text-sm font-normal leading-normal">May 21 - Jun 20</p>
+</div>
+</div>
+<div class="flex h-full flex-shrink-0 flex-col gap-4 rounded-lg w-40 cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col transition-transform group-hover:scale-105" data-alt="Abstract image for Cancer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-K8FUmsYWwSc2fA9CLkYfIn9KCZp0e8pyxhZOLyvpSOpBdIF88OZLLaCQBKaMTE1AOgZmPpQk3wvM6iecJRg-M-BzXoYzlxfHhiM0t1atpnfEQUG_brMAGvJmjiwT4DL5RsoYBfqMY9nTfVNbp6WJ0fXBbuFcSo7oSkTSkt7f-JkUL83kgrfQltIPQHfhjw1rpoA_2BMXis1I8k7w0YbtRoJVV42oww24Fjlv1qu9_9EhqVoDJ1VVoblcu9Rut0JRkBAcpTVAIiYS");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Cancer</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Jun 21 - Jul 22</p>
+</div>
+</div>
+<div class="flex h-full flex-shrink-0 flex-col gap-4 rounded-lg w-40 cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col transition-transform group-hover:scale-105" data-alt="Abstract image for Leo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACNIRyAEDSduTksj1Np0lzZgrGI52joYF3TpU0xjNEMyTK8rtG4v4-IptGJpQwScbke3ip05yYjZ_nJhZyH4z4W37-jyesLW1tJ2nlpbxELJ7dX7CzbuY-HKKkPOwrB9jqSekzG-5zOMahPI7GMLLzDAvvvjp7QzLtZb4nCnbKAYJov779BaSg10f0QnYdEaIYzkYNQ5cDgWk3W94h7o9Em6wYdlpHTOwZTfu6AfHpPpzPxNXQQmB6AKmfKq1fu6H8kfcfyrMvE8lE");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Leo</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Jul 23 - Aug 22</p>
+</div>
+</div>
+<div class="flex h-full flex-shrink-0 flex-col gap-4 rounded-lg w-40 cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col transition-transform group-hover:scale-105" data-alt="Abstract image for Virgo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7Od6JcvNrEt4_FNbdNktnlGvbppQQ1-AINx_RgTOB8vA2nxavXZDxq0h-78F8eZWIjPaqZvsUYfPEfmbjSNmbuoxRk7t2W-SUTbCeXUzLDmxe8JhWrrahp_5P6JDD7grXn2QMuxsnRkEOqp18LZlbGANjemmhgRMUzY1yvU2EhBRLbGIWjxWtwjS5dIQ1daKh2n9pcJNsPKpDEhC8h4_zn1uJDXMU8HA600ZMGEJBX39I-D3ywAQ1xgji5fC1yqucdu0dHRdwTDRF");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Virgo</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Aug 23 - Sep 22</p>
+</div>
+</div>
+<div class="flex h-full flex-shrink-0 flex-col gap-4 rounded-lg w-40 cursor-pointer group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col transition-transform group-hover:scale-105" data-alt="Abstract image for Libra" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNJH5WY-VWrKX3v5NWcWDo9Bq9K1eMsLQbdP5e3BsM6rv2Wa4RELey4WIUwAJMcLx8sjnJbOMwZ-IQwnPkLl2haBJGtQPJMRVraHQ62HiNReTEJogHfchxk_FCcrEReGbyT2pH4Lu0ig_qpeL2xOr5wohhXTae6mkQxSz26oBzczmeTMqL_Py0kr6Npy0gzrxg-h4fqrsn15anlXcR07A4o5PjT_WHo4Pghu5vm2Egp2zNvswHhLlFdViqhAeoCcWDJUOS2Kh-Vj3m");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Libra</p>
+<p class="text-white/60 text-sm font-normal leading-normal">Sep 23 - Oct 22</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Readers</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+<div class="flex flex-col gap-4 rounded-xl bg-white/5 p-5 hover:bg-white/10 transition-colors">
+<img class="h-48 w-full rounded-lg object-cover" data-alt="Professional headshot of Elara Vance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP-jHRNri4ufwq-dG5e9UQrwfAm_vSGnV5lQCsWIbox9L1wG3jE_cUVCZp9Lckqc-rsfyxM-8xLjBrD2cEJ8gmzINbO4tKA2tg80W0PVDtohTXDjY6Ku9kGyY9MBMezfgrGUr3ZzyzfYb28EJWaIDKB0squGHgatyREwRzgZo4-W9LhLR-XlZ9nMCTvnVh1UQdoLzW9pQwwhkft4Bf89pQ3ei99lN61XIqZ9MhzSaos25qbr5rFzlfAwT6n03giaCb0e0vdk0-yiZR"/>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Elara Vance</h3>
+<p class="text-primary text-sm font-medium">Natal Charts &amp; Tarot</p>
+<div class="flex items-center gap-1 text-amber-400">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star_half</span>
+<span class="text-white/60 text-sm ml-1">(4.8)</span>
+</div>
+</div>
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-colors">
+<span class="truncate">View Profile</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 rounded-xl bg-white/5 p-5 hover:bg-white/10 transition-colors">
+<img class="h-48 w-full rounded-lg object-cover" data-alt="Professional headshot of Kael Sterling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkxtL-HlhaZA5xWFudUrcxeZ41gqcXU_nJ-mFcyZvpTXIpDvxAJV0BGW7MN1P29yVjglo5ADfRSo-QKTbgzU4kO_GbzIHFGckB4178ELurUDyx83JU87uORkp6zW27MrYzIuoGsXt8-xy2rqFCcgVqfg0soFTQGrNRlo9gcIqmGGWJFswAYHOLVd-5Ky0e6gujA-LDDo39f8ecNJnTZLV4ivamGFdOgHwx6l0ddegPdGGwuC39IxmJheZBMNYzLHxqFOF_Yfxtx30E"/>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Kael Sterling</h3>
+<p class="text-primary text-sm font-medium">Synastry &amp; Relationships</p>
+<div class="flex items-center gap-1 text-amber-400">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="text-white/60 text-sm ml-1">(5.0)</span>
+</div>
+</div>
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-colors">
+<span class="truncate">View Profile</span>
+</button>
+</div>
+<div class="flex flex-col gap-4 rounded-xl bg-white/5 p-5 hover:bg-white/10 transition-colors">
+<img class="h-48 w-full rounded-lg object-cover" data-alt="Professional headshot of Lyra Meadowes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe3_BTkOuV0gAP6Gkzwc62HJSVp6tEx6rmrLdKJFHImN_ixK2-HCiEHlktsMI0f2JGM667UVXUn51ol9ifcqSXXmrBnV7zR6jiKHAVqjYeavzfUqe8vokakj4gquyJrtLSG9dw5KXXlUSzvMWDQEhYeVNC7RDy0iCYrA1_ZvcH9X455SWclPqwsOAUx41tYFQjg_8kSWJufaS9SkHISdexYHWllUN3fZaCETsljJ5-vmfry-CyDoyGivwFDmflLD72e9LJyVrPnz1v"/>
+<div class="flex flex-col gap-2">
+<h3 class="text-white text-lg font-bold">Lyra Meadowes</h3>
+<p class="text-primary text-sm font-medium">Career &amp; Life Path</p>
+<div class="flex items-center gap-1 text-amber-400">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star_half</span>
+<span class="text-white/60 text-sm ml-1">(4.9)</span>
+</div>
+</div>
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-white/10 text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-colors">
+<span class="truncate">View Profile</span>
+</button>
+</div>
+</div>
+</section>
+<section class="px-4 py-10">
+<div class="flex flex-col items-center text-center gap-6 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 p-8 md:p-12">
+<span class="material-symbols-outlined text-primary text-5xl">format_quote</span>
+<blockquote class="text-white text-xl md:text-2xl font-medium leading-relaxed max-w-3xl">"AstroVerse has been my guiding star. The daily horoscopes are incredibly accurate, and my reading with Elara was a life-changing experience. I feel so much more connected to my path."</blockquote>
+<div class="text-center mt-2">
+<p class="text-white font-bold">Sarah J.</p>
+<p class="text-white/60 text-sm">Satisfied User</p>
+</div>
+</div>
+</section>
+<footer class="border-t border-solid border-white/10 mt-10 px-4 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4 col-span-2 md:col-span-1">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h3 class="text-white text-lg font-bold">AstroVerse</h3>
+</div>
+<p class="text-white/60 text-sm">Your guide to the cosmos.</p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-semibold">Explore</h4>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Horoscopes</a>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Readers</a>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Birth Chart</a>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Blog</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-semibold">Company</h4>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">About Us</a>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Careers</a>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-white font-semibold">Legal</h4>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Terms of Service</a>
+<a class="text-white/60 hover:text-white transition-colors text-sm" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="border-t border-solid border-white/10 mt-8 pt-6 text-center text-white/60 text-sm">
+<p>© 2024 AstroVerse. All rights reserved.</p>
+</div>
+</footer>
+</main>
+</div>
+</div>
+</div>
+</div>
+</body></html>

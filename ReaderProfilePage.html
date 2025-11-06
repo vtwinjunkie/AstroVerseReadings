@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Astrologer Profile Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#3713ec",
+                "background-light": "#f6f6f8",
+                "background-dark": "#131022",
+              },
+              fontFamily: {
+                "display": ["Space Grotesk", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col font-display group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-8 md:px-16 lg:px-24 py-3 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-gray-800 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="text-gray-800 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">AstroVerse</h2>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal" href="#">Horoscopes</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal" href="#">Readings</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal" href="#">Learn</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white text-sm font-medium leading-normal" href="#">Shop</a>
+</div>
+<div class="flex gap-2 items-center">
+<button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-white/20 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAu0yXquRBC9c665ODiVFRo3IBULTmwMM8uHlhDVawhvhccg3pWkvOw7yPekolB715tmjg4QYhjf7Hd5hFm7MeS1QK_5yCLPPeyq0UtTEABiS53t_obZ-As__d0Tuel6ljHqFS1qEtKulz5DnAQTRN3htXNht_vLBKeF16BryVmqkypuLhyzZk2jkQdg643rCUAYN77gXBoZeh8E69DOCPVObPM9a4BU9KywvAHLUTauzXz_rlG3rR7KyvA2z3onfLq9Bb5XGmdxC0w");'></div>
+</div>
+</div>
+</header>
+<main class="px-4 sm:px-8 md:px-16 lg:px-24 flex flex-1 justify-center py-5 sm:py-10">
+<div class="layout-content-container flex flex-col w-full max-w-6xl flex-1">
+<div class="flex p-4 @container bg-white/5 dark:bg-white/5 rounded-xl shadow-lg dark:shadow-black/20">
+<div class="flex w-full flex-col gap-6 @[520px]:flex-row @[520px]:justify-between @[520px]:items-center">
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 mx-auto sm:mx-0 shrink-0" data-alt="Profile photo of Elara Vance" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGqJOmh6lclN8K3EICLH7xZwR_6xbgEUErXhRWFhMH8rO5PjNxGSlbQH58DU7zaTkSu1kb_sBGy4baClesBvvZE6yACPquBxtyIZkAki6l2xMv_31XVMVKDQegJR_rHKi2QxMRT-tP9VR4uIKpR2L0O_fDv5HFR9Z_7UTe5_e-XplYTTf42YoF3nTye0kCcST7Z_uHr1Qv9N7hwh1bsksUVnU1Md7iqsAQUYxN4I59LX4SDh1J2_rkQs1hUwy0zVm-LHPCPKkIJiSW");'></div>
+<div class="flex flex-col justify-center text-center sm:text-left">
+<p class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Elara Vance</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal mt-1">Tarot Reader &amp; Astrologer. Guiding you through life's cosmic currents.</p>
+<div class="flex items-center gap-2 mt-2 justify-center sm:justify-start">
+<span class="material-symbols-outlined text-yellow-400" style="font-variation-settings: 'FILL' 1;">star</span>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">4.9 (212 Reviews) • 
+                           <span class="inline-flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">verified</span> Verified Professional
+                           </span>
+</p>
+</div>
+</div>
+</div>
+<div class="flex w-full max-w-[480px] gap-3 @[480px]:w-auto self-center">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] flex-1 @[480px]:flex-auto hover:bg-gray-300 dark:hover:bg-white/20 transition-colors">
+<span class="truncate">Message</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] flex-1 @[480px]:flex-auto hover:bg-primary/90 transition-colors">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<aside class="lg:col-span-1 lg:sticky top-28 h-fit">
+<div class="bg-white/5 dark:bg-white/5 p-6 rounded-xl shadow-lg dark:shadow-black/20">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Expertise</h3>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">Career &amp; Finance</span>
+<span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">Love &amp; Relationships</span>
+<span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">Natal Charts</span>
+<span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">Tarot</span>
+<span class="bg-primary/20 text-primary text-xs font-semibold px-3 py-1 rounded-full">Future Forecast</span>
+</div>
+<div class="border-t border-white/10 my-6"></div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Languages</h3>
+<p class="text-gray-500 dark:text-gray-400 mt-2">English, Spanish</p>
+<div class="border-t border-white/10 my-6"></div>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Member Since</h3>
+<p class="text-gray-500 dark:text-gray-400 mt-2">2018</p>
+</div>
+</aside>
+<div class="lg:col-span-2">
+<div class="pb-3">
+<div class="flex border-b border-white/10 px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-gray-900 dark:text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">About</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-gray-400 pb-[13px] pt-4 hover:border-b-primary/50 hover:text-gray-800 dark:hover:text-gray-200 transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Services</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-gray-400 pb-[13px] pt-4 hover:border-b-primary/50 hover:text-gray-800 dark:hover:text-gray-200 transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Availability</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-gray-400 pb-[13px] pt-4 hover:border-b-primary/50 hover:text-gray-800 dark:hover:text-gray-200 transition-colors" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Reviews (212)</p>
+</a>
+</div>
+</div>
+<div class="py-5">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3">About Elara</h2>
+<p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">
+                        With over 15 years of experience, Elara combines ancient astrological wisdom with intuitive tarot readings to provide clarity and guidance. Her approach is rooted in compassion and a deep understanding of cosmic patterns, helping clients navigate their life paths with confidence and purpose. She believes that the stars offer a roadmap, but we hold the power to choose our direction.
+                    </p>
+<p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">
+                        Whether you're facing a challenging decision, seeking insight into your relationships, or simply curious about what the future holds, Elara provides a safe and supportive space for exploration and discovery.
+                    </p>
+</div>
+<div class="py-5">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3">Services &amp; Pricing</h2>
+<div class="space-y-4 px-4">
+<div class="bg-white/5 dark:bg-white/5 p-4 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Natal Chart Reading</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">A deep dive into your birth chart. (60 min)</p>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto">
+<p class="font-bold text-lg text-gray-900 dark:text-white">$150</p>
+<button class="flex-1 sm:flex-none min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">Select</button>
+</div>
+</div>
+<div class="bg-white/5 dark:bg-white/5 p-4 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Tarot Reading</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Insight on a specific question or area of life. (30 min)</p>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto">
+<p class="font-bold text-lg text-gray-900 dark:text-white">$75</p>
+<button class="flex-1 sm:flex-none min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">Select</button>
+</div>
+</div>
+<div class="bg-white/5 dark:bg-white/5 p-4 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Couples Synastry Reading</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Explore the dynamics of your relationship. (90 min)</p>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto">
+<p class="font-bold text-lg text-gray-900 dark:text-white">$225</p>
+<button class="flex-1 sm:flex-none min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">Select</button>
+</div>
+</div>
+</div>
+</div>
+<div class="py-5">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3">Availability</h2>
+<div class="p-4 bg-white/5 dark:bg-white/5 rounded-xl">
+<div class="flex justify-between items-center mb-4">
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors"><span class="material-symbols-outlined text-gray-400">chevron_left</span></button>
+<h4 class="font-bold text-gray-900 dark:text-white">October 2024</h4>
+<button class="p-2 rounded-full hover:bg-white/10 transition-colors"><span class="material-symbols-outlined text-gray-400">chevron_right</span></button>
+</div>
+<div class="grid grid-cols-7 text-center text-sm text-gray-500 dark:text-gray-400 mb-2">
+<span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+</div>
+<div class="grid grid-cols-7 text-center gap-1 text-gray-800 dark:text-gray-200">
+<div class="text-gray-600 dark:text-gray-600">29</div><div class="text-gray-600 dark:text-gray-600">30</div>
+<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
+<div>6</div><div class="bg-primary/20 text-primary font-bold rounded-lg p-2 cursor-pointer hover:bg-primary/30">7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+<div>13</div><div>14</div><div class="bg-primary/20 text-primary font-bold rounded-lg p-2 cursor-pointer hover:bg-primary/30">15</div><div>16</div><div class="bg-primary/20 text-primary font-bold rounded-lg p-2 cursor-pointer hover:bg-primary/30">17</div><div>18</div><div>19</div>
+<div>20</div><div>21</div><div>22</div><div class="bg-primary text-white font-bold rounded-lg p-2 cursor-pointer">23</div><div>24</div><div>25</div><div>26</div>
+<div>27</div><div>28</div><div>29</div><div>30</div><div>31</div>
+<div class="text-gray-600 dark:text-gray-600">1</div><div class="text-gray-600 dark:text-gray-600">2</div>
+</div>
+<div class="border-t border-white/10 my-4"></div>
+<h4 class="font-bold text-gray-900 dark:text-white mb-3">Available Slots on Oct 23</h4>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+<button class="text-center p-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">09:00 AM</button>
+<button class="text-center p-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">11:00 AM</button>
+<button class="text-center p-2 border border-gray-600 text-gray-500 rounded-lg cursor-not-allowed text-sm">01:00 PM</button>
+<button class="text-center p-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors text-sm">03:00 PM</button>
+</div>
+</div>
+</div>
+<div class="py-5">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3">Client Reviews</h2>
+<div class="space-y-6 px-4">
+<div class="bg-white/5 dark:bg-white/5 p-4 rounded-xl">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Reviewer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHriVlo-GQSqdVb92DoawgEhR-dL4f0sgDIMvm_LTgdqrbl7DRtPRmtKvEKjVaAXRKsjs1TymLf89aISq52SA1fsozNBw274Squou8pFHut-4cMGxuAtcAZZmpcgGWdqr5Rh8SeZ4vQFjsx8mKLnl2pbhdKmiMacLWoi5fWrC9stYEH9Nk-qS2ClGhpw0CXxoJwXl_ZtVX-pZeijf4nuNhGmIzXmxvQalGn6-YH2szPrdnXAGb_93FFgYEDRnivkwvWCnIoMvUIe0B");'></div>
+<div>
+<p class="font-bold text-gray-900 dark:text-white">Alex Johnson</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">September 15, 2024</p>
+</div>
+</div>
+<div class="flex text-yellow-400">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 mt-3 text-sm leading-relaxed">
+                             "Elara's reading was incredibly insightful and accurate. She provided so much clarity on my career path, and I left the session feeling empowered and confident. Highly recommend!"
+                           </p>
+</div>
+<div class="bg-white/5 dark:bg-white/5 p-4 rounded-xl">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Reviewer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACpTWINQUU3Wt5_tlzvTdkV5Cb-ToQvfrAOW8Fr4se8S-6oUHIPg5MpqZA7sI5uQaKzp5fz2J3kjFwqH_I9db1AvxJyisRWu8HQDQ57IZzwnTfAlfwDzvSs91Bd8K4oOrfBBLd2wXiQDmp0uq2C9piWdCpbd803wen-eIjOfNsIg9JyEMbpO-G6XvWAoHc0UEb5TvN-PA-O8whV1QlsnrJWWx9-csD0_j3D6o2cBJXMw4AElFXZspSt-cDI30CMCwUwLVui09Hg9mK");'></div>
+<div>
+<p class="font-bold text-gray-900 dark:text-white">Samantha Lee</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">August 28, 2024</p>
+</div>
+</div>
+<div class="flex text-yellow-400">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+</div>
+<p class="text-gray-600 dark:text-gray-300 mt-3 text-sm leading-relaxed">
+                              "A truly wonderful experience. Elara is compassionate and her guidance on my relationship was spot on. While some parts were hard to hear, it was exactly what I needed. Thank you!"
+                           </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

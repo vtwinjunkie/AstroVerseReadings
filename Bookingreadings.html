@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AstroVerse - Book Your Reading</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3713ec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131022",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 sm:px-10 lg:px-20 py-4 font-display">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">AstroVerse</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Readings</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Horoscopes</a>
+<a class="text-white/80 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">About Us</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/80 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6zWbhE4CE114PAtSQarXI4xZ2kz_WaV1-uU4vdJ_x5_qEy-OS5hdRUXTUYgm9D_0UEwctp1Y5eQM-BAxIW_qFTWp5iCRvLYD7bgWoGWYx5U_lYyGikqar9lz08beyZaii7KhCSyDX6l0yG4nqxEBe2rqD7FNvyWK7C_m8ShYOLoVbAlUsYqb8NffCasF4CXuI37WZyqfYY7E229BsKYOFgyWwO7zEDTzGdNdPe9yXLGwKt2cS1zjeo9PqdWD3co6zmD2MYg_FbDgi");'></div>
+</div>
+</header>
+<main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 font-display">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="w-full lg:w-3/5 flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Book Your Reading</p>
+<p class="text-white/60 text-base font-normal leading-normal">Select your desired reading, choose a time, and connect with your astrologer.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<div class="flex gap-6 justify-between"><p class="text-white text-base font-medium leading-normal">Step 1 of 3: Select Service</p></div>
+<div class="rounded-full bg-white/10 h-2"><div class="h-2 rounded-full bg-primary" style="width: 33%;"></div></div>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4 p-4">
+<div class="flex flex-col gap-3 pb-3 border border-primary/50 bg-primary/10 p-4 rounded-xl cursor-pointer ring-2 ring-primary">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="A stylized representation of a birth chart with planets and zodiac signs." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgLSZgBcTb2VbZj3sULZ2NaHvUMcfwjqMLLQ24i_bnpbXV5zouakcmXUMKPmpPYjvV34YEcYhc3Sw-VxyrzT4RHNB0W08PmvuNupQPwii68Wi6moayQo2XZASlFpHGRGJ8UAAwZ3mgiy_clGczoNSba1iLw9aUa1XHUyfXETIxzwdzWc9f_X4-hia_vzrzCb_rQnhJhxCpE7LPr3HbAzWBB81L0YVRmkAeRpJoPhHGQN5AwZOedV6S65GLyQYwMKcwQHCjtW24aN0Y");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Birth Chart Reading</p>
+<p class="text-white/60 text-sm font-normal leading-normal">60 mins - $150</p>
+<p class="text-white/60 text-sm font-normal leading-normal mt-1">A deep dive into your personal astrological map.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 border border-white/10 hover:border-primary/50 bg-white/5 p-4 rounded-xl cursor-pointer transition-colors">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Artistic tarot cards spread out on a dark surface." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYiw01mmn_NE3o_lljKz2Y-FbOSMyowwvt-zqEMOq-8Kg-xLGfjqMxeYSKYmz4a2ed1PtmX8E_3Ao6nQHEkH96OFy0f92vwCMxNspUnV4RtxXqtX2aZb8aZOmA-Wq_zDztkCRdNRb75DRQda_OvfZN6F1qB8Soy5MShrmCgfPdVNpFCABHsPe1SCpdHZ5tzuxto6hfVib_A0-ep7akVP63HVwlTKnLCyJp1F2BP3qUR6bXchEreuInqaYHhdm1-Mtou5I5jLpdoQGw");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Tarot Session</p>
+<p class="text-white/60 text-sm font-normal leading-normal">30 mins - $75</p>
+<p class="text-white/60 text-sm font-normal leading-normal mt-1">Gain clarity and guidance on a specific question.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 border border-white/10 hover:border-primary/50 bg-white/5 p-4 rounded-xl cursor-pointer transition-colors">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Two overlapping circles representing a relationship synastry chart." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2gWnqNSGOqWjW4OOf9ypdffvpvqVfJ_4Kc-CxqVlfBwmlji-QXeIc6qTs9I1TgxeMfYnYm5044uU98cRHgNlejcnMeeG7KkgKUjDLhA0p23wauVilaELW6b8VvDn3J4wDoZyXK978K90Ma2SNGEDjJ7OK8SM-FuU8GTdDOEWYToNlvSdk-MvTU8iqeEy4ZKZWeiX1zWAJ-k1y8EqYR_1LfUWgsW9E22cQSbGNo5TiprwwJsagXMH6yKpw-MVEUApJPw6auyvax2Ie");'></div>
+<div>
+<p class="text-white text-base font-medium leading-normal">Relationship Synastry</p>
+<p class="text-white/60 text-sm font-normal leading-normal">90 mins - $225</p>
+<p class="text-white/60 text-sm font-normal leading-normal mt-1">Explore the dynamics between you and a partner.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 mt-8">
+<h3 class="text-2xl font-bold text-white px-4">Select a Date &amp; Time</h3>
+<div class="flex flex-col md:flex-row items-start justify-center gap-6 p-4">
+<div class="flex w-full md:max-w-sm flex-1 flex-col gap-0.5 bg-white/5 border border-white/10 p-4 rounded-xl">
+<div class="flex items-center p-1 justify-between">
+<button class="text-white/60 hover:text-white transition-colors">
+<span class="material-symbols-outlined flex size-10 items-center justify-center">chevron_left</span>
+</button>
+<p class="text-white text-base font-bold leading-tight flex-1 text-center">October 2024</p>
+<button class="text-white/60 hover:text-white transition-colors">
+<span class="material-symbols-outlined flex size-10 items-center justify-center">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7">
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-12 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-12 w-full items-center justify-center pb-0.5">W</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-12 w-full items-center justify-center pb-0.5">F</p>
+<p class="text-white/60 text-[13px] font-bold leading-normal flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<button class="h-12 w-full text-white/50 col-start-4 text-sm font-medium leading-normal cursor-not-allowed">
+<div class="flex size-full items-center justify-center rounded-full">1</div>
+</button>
+<button class="h-12 w-full text-white/50 text-sm font-medium leading-normal cursor-not-allowed"><div class="flex size-full items-center justify-center rounded-full">2</div></button>
+<button class="h-12 w-full text-white/50 text-sm font-medium leading-normal cursor-not-allowed"><div class="flex size-full items-center justify-center rounded-full">3</div></button>
+<button class="h-12 w-full text-white/50 text-sm font-medium leading-normal cursor-not-allowed"><div class="flex size-full items-center justify-center rounded-full">4</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">5</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">6</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">7</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">8</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">9</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">10</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">11</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">12</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">13</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">14</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">15</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">16</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">17</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full bg-primary">18</div>
+</button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">19</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">20</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">21</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">22</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">23</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">24</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">25</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">26</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">27</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">28</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">29</div></button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal hover:bg-primary/30 transition-colors"><div class="flex size-full items-center justify-center rounded-full">30</div></button>
+</div>
+</div>
+<div class="w-full md:w-auto flex-1 flex flex-col gap-3">
+<p class="text-white font-medium">Available Times for Oct 18</p>
+<p class="text-sm text-white/60 flex items-center gap-1.5"><span class="material-symbols-outlined text-base">language</span> Eastern Time (ET)</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+<button class="text-white text-sm rounded-lg py-2.5 px-3 border border-white/20 hover:bg-primary hover:border-primary transition-colors">09:00 AM</button>
+<button class="text-white text-sm rounded-lg py-2.5 px-3 border border-white/20 hover:bg-primary hover:border-primary transition-colors">10:00 AM</button>
+<button class="text-white text-sm rounded-lg py-2.5 px-3 border border-primary bg-primary transition-colors">11:00 AM</button>
+<button class="text-white text-sm rounded-lg py-2.5 px-3 border border-white/20 hover:bg-primary hover:border-primary transition-colors">01:00 PM</button>
+<button class="text-white/40 text-sm rounded-lg py-2.5 px-3 border border-white/10 cursor-not-allowed">02:00 PM</button>
+<button class="text-white text-sm rounded-lg py-2.5 px-3 border border-white/20 hover:bg-primary hover:border-primary transition-colors">03:00 PM</button>
+<button class="text-white text-sm rounded-lg py-2.5 px-3 border border-white/20 hover:bg-primary hover:border-primary transition-colors">04:00 PM</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="w-full lg:w-2/5 lg:sticky top-16 h-fit">
+<div class="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col gap-6">
+<h3 class="text-2xl font-bold text-white">Booking Summary</h3>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-16" data-alt="Profile picture of Selene, the astrologer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuolCQKbpR5aAmSpN66kHUbw1l0EDfECfxtP31KJxSa18cscXGnKCCs330Kqt_ewefmUF7AY5zNwv9vKBTiMjocN6XGmF3tUKAOoK1LY7EUbe6y2IRhwJFWkErYXMUUSUX7OiKyxpJsmZYnHaE0PCkqpoUP7lf8icafD8bsuV9fiCeRbc6fELoF_BXMSt_b9xAQq67GeHFP1Snallxdr0F1iVou4cblR660bw4tKnnEuKLzYdvQ28iMbaATFjgtzm0RZA8OwqOZHll");'></div>
+<div>
+<p class="font-bold text-white">Your Astrologer</p>
+<p class="text-white/80">Selene</p>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-yellow-400 text-sm !text-[16px]">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm !text-[16px]">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm !text-[16px]">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm !text-[16px]">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-sm !text-[16px]">star_half</span>
+<span class="text-white/60 text-xs ml-1">(4.9/5)</span>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10"></div>
+<div class="flex flex-col gap-3 text-sm">
+<div class="flex justify-between items-center">
+<span class="text-white/60">Service</span>
+<span class="text-white font-medium">Birth Chart Reading</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white/60">Date</span>
+<span class="text-white font-medium">October 18, 2024</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white/60">Time</span>
+<span class="text-white font-medium">11:00 AM (ET)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-white/60">Duration</span>
+<span class="text-white font-medium">60 minutes</span>
+</div>
+</div>
+<div class="border-t border-white/10"></div>
+<div class="flex justify-between items-baseline">
+<span class="text-white text-lg font-bold">Total</span>
+<span class="text-white text-2xl font-black">$150.00</span>
+</div>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/80 transition-colors">
+<span class="truncate">Continue to Payment</span>
+</button>
+</div>
+</aside>
+</div>
+</main>
+</div>
+</div>
+</body></html>
