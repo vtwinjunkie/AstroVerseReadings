@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your astrology reading session on AstroVerse">
+    <title>Book Your Reading - AstroVerse</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;400;600" rel="stylesheet">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3713ec",
+                        "primary-dark": "#2a0eb8",
+                        "background-dark": "#131022",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body class="bg-background-dark font-display antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="size-8 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-white text-xl md:text-2xl font-bold">AstroVerse</h1>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="../index.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Home</a>
+                    <a href="horoscopes.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Horoscopes</a>
+                    <a href="readers.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Readers</a>
+                </div>
+
+                <button class="px-6 py-2.5 bg-primary hover:bg-primary-dark text-white text-sm font-bold rounded-lg transition-colors">
+                    Log In
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="min-h-screen py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Page Header -->
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Book Your Reading</h2>
+                <p class="text-lg text-white/70 max-w-2xl">
+                    Select your desired reading, choose a time, and connect with your astrologer.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Main Booking Flow -->
+                <div class="lg:col-span-2">
+
+                    <!-- Progress Indicator -->
+                    <div class="mb-8">
+                        <p class="text-white font-semibold mb-4">Step 1 of 3: Select Service</p>
+                        <div class="flex gap-2">
+                            <div class="flex-1 h-2 bg-primary rounded-full"></div>
+                            <div class="flex-1 h-2 bg-white/10 rounded-full"></div>
+                            <div class="flex-1 h-2 bg-white/10 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Service Selection -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold text-white mb-6">Select Your Service</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Service 1 - Selected -->
+                            <button onclick="selectService('birth-chart', 150, 60)" id="service-birth-chart"
+                                    class="service-card text-left bg-white/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-primary transition-all hover:border-primary group">
+                                <div class="aspect-square rounded-xl bg-gradient-to-br from-primary/20 to-purple-600/20 mb-4 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-5xl">auto_awesome</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2">Birth Chart Reading</h4>
+                                <p class="text-white/70 text-sm mb-3">60 mins - $150</p>
+                                <p class="text-white/60 text-sm">A deep dive into your personal astrological map.</p>
+                            </button>
+
+                            <!-- Service 2 -->
+                            <button onclick="selectService('tarot', 75, 30)" id="service-tarot"
+                                    class="service-card text-left bg-white/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/10 transition-all hover:border-primary group">
+                                <div class="aspect-square rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-600/20 mb-4 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-purple-400 text-5xl">style</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2">Tarot Session</h4>
+                                <p class="text-white/70 text-sm mb-3">30 mins - $75</p>
+                                <p class="text-white/60 text-sm">Gain clarity and guidance on a specific question.</p>
+                            </button>
+
+                            <!-- Service 3 -->
+                            <button onclick="selectService('synastry', 225, 90)" id="service-synastry"
+                                    class="service-card text-left bg-white/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/10 transition-all hover:border-primary group">
+                                <div class="aspect-square rounded-xl bg-gradient-to-br from-pink-500/20 to-red-600/20 mb-4 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-pink-400 text-5xl">favorite</span>
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-2">Relationship Synastry</h4>
+                                <p class="text-white/70 text-sm mb-3">90 mins - $225</p>
+                                <p class="text-white/60 text-sm">Explore the dynamics between you and a partner.</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Date & Time Selection -->
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-6">Select a Date & Time</h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Calendar -->
+                            <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                                <div class="flex items-center justify-between mb-6">
+                                    <button class="text-white hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">chevron_left</span>
+                                    </button>
+                                    <h4 class="text-white font-bold">October 2024</h4>
+                                    <button class="text-white hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </div>
+
+                                <!-- Calendar Grid -->
+                                <div class="grid grid-cols-7 gap-2">
+                                    <!-- Day Headers -->
+                                    <div class="text-center text-white/60 text-sm font-semibold py-2">S</div>
+                                    <div class="text-center text-white/60 text-sm font-semibold py-2">M</div>
+                                    <div class="text-center text-white/60 text-sm font-semibold py-2">T</div>
+                                    <div class="text-center text-white/60 text-sm font-semibold py-2">W</div>
+                                    <div class="text-center text-white/60 text-sm font-semibold py-2">T</div>
+                                    <div class="text-center text-white/60 text-sm font-semibold py-2">F</div>
+                                    <div class="text-center text-white/60 text-sm font-semibold py-2">S</div>
+
+                                    <!-- Calendar Days -->
+                                    <button class="text-center text-white/40 text-sm py-2">29</button>
+                                    <button class="text-center text-white/40 text-sm py-2">30</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">1</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">2</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">3</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">4</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">5</button>
+
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">6</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">7</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">8</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">9</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">10</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">11</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">12</button>
+
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">13</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">14</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">15</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">16</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">17</button>
+                                    <button onclick="selectDate(18)" id="day-18" class="text-center text-white text-sm py-2 bg-primary rounded-lg font-bold">18</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">19</button>
+
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">20</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">21</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">22</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">23</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">24</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">25</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">26</button>
+
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">27</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">28</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">29</button>
+                                    <button class="text-center text-white text-sm py-2 hover:bg-white/10 rounded-lg">30</button>
+                                    <button class="text-center text-white/40 text-sm py-2">1</button>
+                                    <button class="text-center text-white/40 text-sm py-2">2</button>
+                                    <button class="text-center text-white/40 text-sm py-2">3</button>
+                                </div>
+                            </div>
+
+                            <!-- Available Times -->
+                            <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                                <h4 class="text-white font-bold mb-4">Available Times for Oct 18</h4>
+                                <p class="text-white/60 text-sm mb-4 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-lg">schedule</span>
+                                    Eastern Time (ET)
+                                </p>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button class="py-3 text-center bg-white/5 hover:bg-white/10 text-white font-semibold rounded-lg border border-white/10 transition-colors">
+                                        09:00 AM
+                                    </button>
+                                    <button class="py-3 text-center bg-white/5 hover:bg-white/10 text-white font-semibold rounded-lg border border-white/10 transition-colors">
+                                        10:00 AM
+                                    </button>
+                                    <button onclick="selectTime('11:00 AM')" id="time-11am" class="time-slot py-3 text-center bg-primary text-white font-semibold rounded-lg transition-colors">
+                                        11:00 AM
+                                    </button>
+                                    <button class="py-3 text-center bg-white/5 text-white/40 font-semibold rounded-lg border border-white/10 cursor-not-allowed">
+                                        02:00 PM
+                                    </button>
+                                    <button class="py-3 text-center bg-white/5 hover:bg-white/10 text-white font-semibold rounded-lg border border-white/10 transition-colors">
+                                        01:00 PM
+                                    </button>
+                                    <button class="py-3 text-center bg-white/5 hover:bg-white/10 text-white font-semibold rounded-lg border border-white/10 transition-colors">
+                                        03:00 PM
+                                    </button>
+                                    <button class="py-3 text-center bg-white/5 hover:bg-white/10 text-white font-semibold rounded-lg border border-white/10 transition-colors">
+                                        04:00 PM
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Summary Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 sticky top-24">
+                        <h3 class="text-xl font-bold text-white mb-6">Booking Summary</h3>
+
+                        <!-- Astrologer Info -->
+                        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                                 alt="Selene"
+                                 class="w-16 h-16 rounded-full object-cover">
+                            <div>
+                                <h4 class="text-white font-bold">Selene</h4>
+                                <div class="flex items-center gap-1 mt-1">
+                                    <span class="text-amber-400 text-sm">★</span>
+                                    <span class="text-white/70 text-sm">4.9/5</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Booking Details -->
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between">
+                                <span class="text-white/70">Service</span>
+                                <span id="summary-service" class="text-white font-semibold text-right">Birth Chart Reading</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-white/70">Date</span>
+                                <span id="summary-date" class="text-white font-semibold">October 18, 2024</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-white/70">Time</span>
+                                <span id="summary-time" class="text-white font-semibold">11:00 AM (ET)</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-white/70">Duration</span>
+                                <span id="summary-duration" class="text-white font-semibold">60 minutes</span>
+                            </div>
+                        </div>
+
+                        <!-- Total -->
+                        <div class="pt-6 border-t border-white/10 mb-6">
+                            <div class="flex justify-between items-center">
+                                <span class="text-white text-lg font-bold">Total</span>
+                                <span id="summary-total" class="text-white text-2xl font-bold">$150.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Continue Button -->
+                        <button class="w-full py-4 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-colors">
+                            Continue to Payment
+                        </button>
+
+                        <p class="text-white/60 text-xs text-center mt-4">
+                            By continuing, you agree to our Terms of Service
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/10 py-8 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/60 text-sm">&copy; 2024 AstroVerse. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#about" class="text-white/60 hover:text-white text-sm transition-colors">About Us</a>
+                    <a href="#contact" class="text-white/60 hover:text-white text-sm transition-colors">Contact</a>
+                    <a href="#privacy" class="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        let selectedService = {
+            name: 'Birth Chart Reading',
+            price: 150,
+            duration: 60
+        };
+        let selectedDate = 'October 18, 2024';
+        let selectedTime = '11:00 AM (ET)';
+
+        function selectService(service, price, duration) {
+            // Update selection
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.classList.remove('border-primary', 'bg-white/5');
+                card.classList.add('border-white/10');
+            });
+            document.getElementById(`service-${service}`).classList.add('border-primary');
+
+            // Update booking info
+            const serviceNames = {
+                'birth-chart': 'Birth Chart Reading',
+                'tarot': 'Tarot Session',
+                'synastry': 'Relationship Synastry'
+            };
+
+            selectedService = {
+                name: serviceNames[service],
+                price: price,
+                duration: duration
+            };
+
+            updateSummary();
+        }
+
+        function selectDate(day) {
+            selectedDate = `October ${day}, 2024`;
+            updateSummary();
+        }
+
+        function selectTime(time) {
+            // Update selected time button
+            document.querySelectorAll('.time-slot').forEach(btn => {
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-white/5');
+            });
+            event.target.classList.add('bg-primary');
+            event.target.classList.remove('bg-white/5');
+
+            selectedTime = `${time} (ET)`;
+            updateSummary();
+        }
+
+        function updateSummary() {
+            document.getElementById('summary-service').textContent = selectedService.name;
+            document.getElementById('summary-date').textContent = selectedDate;
+            document.getElementById('summary-time').textContent = selectedTime;
+            document.getElementById('summary-duration').textContent = `${selectedService.duration} minutes`;
+            document.getElementById('summary-total').textContent = `$${selectedService.price.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

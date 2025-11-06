@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find and connect with trusted astrologers and psychic readers on AstroVerse">
+    <title>Find Your Guide - AstroVerse Readers</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;400;600" rel="stylesheet">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3713ec",
+                        "primary-dark": "#2a0eb8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131022",
+                        "cosmic-purple": "#1a1333",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body class="bg-background-dark font-display antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="size-8 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-white text-xl md:text-2xl font-bold tracking-tight">AstroVerse</h1>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="../index.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Home</a>
+                    <a href="horoscopes.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Horoscopes</a>
+                    <a href="readers.html" class="text-primary font-semibold text-sm">Readers</a>
+                    <a href="#blog" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Blog</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center gap-3">
+                    <button class="flex items-center justify-center px-6 py-2.5 bg-primary hover:bg-primary-dark text-white text-sm font-bold rounded-lg transition-colors">
+                        Sign Up
+                    </button>
+                    <button class="hidden sm:flex items-center justify-center px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white text-sm font-bold rounded-lg transition-colors">
+                        Log In
+                    </button>
+                    <button class="lg:hidden text-white">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen py-12 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Page Header -->
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Find Your Guide</h2>
+                <p class="text-lg text-white/70 max-w-2xl">
+                    Discover and connect with trusted astrologers and psychic readers on AstroVerse.
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar Filters -->
+                <aside class="lg:w-64 flex-shrink-0">
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 sticky top-24">
+
+                        <!-- Search -->
+                        <div class="mb-6">
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-3 top-1/2 transform -translate-y-1/2 text-white/60">search</span>
+                                <input type="text" id="search-input" placeholder="Search by name..."
+                                       class="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/60 focus:outline-none focus:border-primary">
+                            </div>
+                        </div>
+
+                        <!-- Filter By -->
+                        <h3 class="text-white font-bold text-lg mb-4">Filter By</h3>
+
+                        <!-- Specialization -->
+                        <div class="mb-6">
+                            <button class="flex items-center justify-between w-full text-white font-semibold mb-3" onclick="toggleSection('specialization')">
+                                <span>Specialization</span>
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button>
+                            <div id="specialization-section" class="space-y-2">
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">Tarot Reading</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">Natal Charts</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">Numerology</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">Synastry</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Availability -->
+                        <div class="mb-6">
+                            <button class="flex items-center justify-between w-full text-white font-semibold mb-3" onclick="toggleSection('availability')">
+                                <span>Availability</span>
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button>
+                            <div id="availability-section" class="space-y-2">
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">Online Now</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">Available Today</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Price Range -->
+                        <div class="mb-6">
+                            <button class="flex items-center justify-between w-full text-white font-semibold mb-3" onclick="toggleSection('price')">
+                                <span>Price Range</span>
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button>
+                            <div id="price-section" class="space-y-2">
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">$ (Under $50)</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">$$ ($50-$100)</span>
+                                </label>
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm">$$$ ($100+)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Rating -->
+                        <div class="mb-6">
+                            <button class="flex items-center justify-between w-full text-white font-semibold mb-3" onclick="toggleSection('rating')">
+                                <span>Rating</span>
+                                <span class="material-symbols-outlined">expand_more</span>
+                            </button>
+                            <div id="rating-section" class="space-y-2">
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm flex items-center gap-1">
+                                        <span class="text-amber-400">★★★★★</span> 5.0
+                                    </span>
+                                </label>
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm flex items-center gap-1">
+                                        <span class="text-amber-400">★★★★</span> 4.0+
+                                    </span>
+                                </label>
+                                <label class="flex items-center gap-2 text-white/80 cursor-pointer hover:text-white">
+                                    <input type="checkbox" class="filter-checkbox w-4 h-4 rounded border-white/20 bg-white/5 text-primary focus:ring-primary">
+                                    <span class="text-sm flex items-center gap-1">
+                                        <span class="text-amber-400">★★★</span> 3.0+
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Filter Buttons -->
+                        <div class="flex gap-3">
+                            <button class="flex-1 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors">
+                                Apply
+                            </button>
+                            <button class="flex-1 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors">
+                                Reset
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="flex-1">
+                    <!-- Results Header -->
+                    <div class="flex items-center justify-between mb-8">
+                        <p class="text-white/70">Showing <span class="text-white font-semibold">8</span> of <span class="text-white font-semibold">124</span> readers</p>
+                        <div class="flex items-center gap-2">
+                            <span class="text-white/70 text-sm">Sort by:</span>
+                            <select class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-primary">
+                                <option>Top Rated</option>
+                                <option>Most Reviews</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Reader Cards Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+                        <!-- Reader Card 1 - Celeste Rivers (Online) -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all">
+                            <div class="p-6">
+                                <div class="relative w-24 h-24 mx-auto mb-4">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
+                                         alt="Celeste Rivers"
+                                         class="w-full h-full rounded-full object-cover border-2 border-white/10">
+                                    <span class="absolute bottom-0 right-0 w-6 h-6 bg-green-500 rounded-full border-2 border-background-dark"></span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white text-center mb-2">Celeste Rivers</h3>
+                                <p class="text-center mb-4">
+                                    <span class="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">Natal Chart Expert</span>
+                                </p>
+                                <div class="flex items-center justify-center gap-1 mb-6">
+                                    <div class="flex text-amber-400">
+                                        <span class="text-lg">★★★★★</span>
+                                    </div>
+                                    <span class="text-white/60 text-sm ml-2">4.9 (150+)</span>
+                                </div>
+                                <button onclick="window.location.href='reader-profile.html?reader=celeste'"
+                                        class="w-full py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Reader Card 2 - Orion Vance (Online) -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all">
+                            <div class="p-6">
+                                <div class="relative w-24 h-24 mx-auto mb-4">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+                                         alt="Orion Vance"
+                                         class="w-full h-full rounded-full object-cover border-2 border-white/10">
+                                    <span class="absolute bottom-0 right-0 w-6 h-6 bg-green-500 rounded-full border-2 border-background-dark"></span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white text-center mb-2">Orion Vance</h3>
+                                <p class="text-center mb-4">
+                                    <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-semibold rounded-full">Tarot Reader</span>
+                                </p>
+                                <div class="flex items-center justify-center gap-1 mb-6">
+                                    <div class="flex text-amber-400">
+                                        <span class="text-lg">★★★★★</span>
+                                    </div>
+                                    <span class="text-white/60 text-sm ml-2">5.0 (212)</span>
+                                </div>
+                                <button onclick="window.location.href='booking.html?reader=orion'"
+                                        class="w-full py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors">
+                                    Chat Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Reader Card 3 - Luna Seraphina -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all">
+                            <div class="p-6">
+                                <div class="relative w-24 h-24 mx-auto mb-4">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop"
+                                         alt="Luna Seraphina"
+                                         class="w-full h-full rounded-full object-cover border-2 border-white/10">
+                                    <span class="absolute bottom-0 right-0 w-6 h-6 bg-gray-500 rounded-full border-2 border-background-dark"></span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white text-center mb-2">Luna Seraphina</h3>
+                                <p class="text-center mb-4">
+                                    <span class="inline-block px-3 py-1 bg-pink-500/20 text-pink-400 text-sm font-semibold rounded-full">Numerologist</span>
+                                </p>
+                                <div class="flex items-center justify-center gap-1 mb-6">
+                                    <div class="flex text-amber-400">
+                                        <span class="text-lg">★★★★☆</span>
+                                    </div>
+                                    <span class="text-white/60 text-sm ml-2">4.2 (98)</span>
+                                </div>
+                                <button onclick="window.location.href='reader-profile.html?reader=luna'"
+                                        class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Reader Card 4 - Jasper Stone -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all">
+                            <div class="p-6">
+                                <div class="relative w-24 h-24 mx-auto mb-4">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop"
+                                         alt="Jasper Stone"
+                                         class="w-full h-full rounded-full object-cover border-2 border-white/10">
+                                    <span class="absolute bottom-0 right-0 w-6 h-6 bg-gray-500 rounded-full border-2 border-background-dark"></span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white text-center mb-2">Jasper Stone</h3>
+                                <p class="text-center mb-4">
+                                    <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-semibold rounded-full">Tarot Reader</span>
+                                </p>
+                                <div class="flex items-center justify-center gap-1 mb-6">
+                                    <div class="flex text-amber-400">
+                                        <span class="text-lg">★★★★☆</span>
+                                    </div>
+                                    <span class="text-white/60 text-sm ml-2">4.7 (300)</span>
+                                </div>
+                                <button onclick="window.location.href='reader-profile.html?reader=jasper'"
+                                        class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Reader Card 5 - Aria Meadow (Online) -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all">
+                            <div class="p-6">
+                                <div class="relative w-24 h-24 mx-auto mb-4">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop"
+                                         alt="Aria Meadow"
+                                         class="w-full h-full rounded-full object-cover border-2 border-white/10">
+                                    <span class="absolute bottom-0 right-0 w-6 h-6 bg-green-500 rounded-full border-2 border-background-dark"></span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white text-center mb-2">Aria Meadow</h3>
+                                <p class="text-center mb-4">
+                                    <span class="inline-block px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">Natal Chart Expert</span>
+                                </p>
+                                <div class="flex items-center justify-center gap-1 mb-6">
+                                    <div class="flex text-amber-400">
+                                        <span class="text-lg">★★★★★</span>
+                                    </div>
+                                    <span class="text-white/60 text-sm ml-2">5.0 (89)</span>
+                                </div>
+                                <button onclick="window.location.href='booking.html?reader=aria'"
+                                        class="w-full py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors">
+                                    Chat Now
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Reader Card 6 - Leo Phoenix -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all">
+                            <div class="p-6">
+                                <div class="relative w-24 h-24 mx-auto mb-4">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop"
+                                         alt="Leo Phoenix"
+                                         class="w-full h-full rounded-full object-cover border-2 border-white/10">
+                                    <span class="absolute bottom-0 right-0 w-6 h-6 bg-gray-500 rounded-full border-2 border-background-dark"></span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white text-center mb-2">Leo Phoenix</h3>
+                                <p class="text-center mb-4">
+                                    <span class="inline-block px-3 py-1 bg-pink-500/20 text-pink-400 text-sm font-semibold rounded-full">Numerologist</span>
+                                </p>
+                                <div class="flex items-center justify-center gap-1 mb-6">
+                                    <div class="flex text-amber-400">
+                                        <span class="text-lg">★★★★☆</span>
+                                    </div>
+                                    <span class="text-white/60 text-sm ml-2">4.6 (142)</span>
+                                </div>
+                                <button onclick="window.location.href='reader-profile.html?reader=leo'"
+                                        class="w-full py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors">
+                                    View Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="flex items-center justify-center gap-2">
+                        <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-white transition-colors">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-semibold">1</button>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-white transition-colors">2</button>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-white transition-colors">3</button>
+                        <span class="text-white/60">...</span>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-white transition-colors">12</button>
+                        <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 hover:bg-white/10 text-white transition-colors">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/10 py-8 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/60 text-sm">&copy; 2024 AstroVerse. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#about" class="text-white/60 hover:text-white text-sm transition-colors">About Us</a>
+                    <a href="#contact" class="text-white/60 hover:text-white text-sm transition-colors">Contact</a>
+                    <a href="#privacy" class="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(`${sectionId}-section`);
+            section.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

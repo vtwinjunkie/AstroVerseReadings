@@ -1,0 +1,379 @@
+/* =================================================================
+   AstroVerse Custom Styles
+   A premium astrology platform with mystical aesthetics
+   ================================================================= */
+
+/* Material Icons Configuration */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body & Root Styles */
+body {
+    overflow-x: hidden;
+}
+
+/* =================================================================
+   Starfield Animation Background
+   ================================================================= */
+.stars-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.stars-container::before,
+.stars-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        100px 100px white, 200px 150px white, 300px 50px white,
+        400px 200px white, 500px 100px white, 600px 250px white,
+        700px 50px white, 800px 150px white, 900px 200px white,
+        1000px 100px white, 50px 300px white, 150px 350px white,
+        250px 400px white, 350px 300px white, 450px 350px white,
+        550px 400px white, 650px 300px white, 750px 350px white,
+        850px 400px white, 950px 300px white, 1050px 350px white,
+        100px 500px white, 200px 550px white, 300px 600px white,
+        400px 500px white, 500px 550px white, 600px 600px white,
+        50px 200px rgba(255,255,255,0.6), 150px 250px rgba(255,255,255,0.6),
+        250px 300px rgba(255,255,255,0.6), 350px 200px rgba(255,255,255,0.6),
+        450px 250px rgba(255,255,255,0.6), 550px 300px rgba(255,255,255,0.6),
+        650px 200px rgba(255,255,255,0.6), 750px 250px rgba(255,255,255,0.6),
+        850px 300px rgba(255,255,255,0.6), 950px 200px rgba(255,255,255,0.6);
+    animation: stars-twinkle 3s infinite ease-in-out;
+}
+
+.stars-container::after {
+    animation-delay: 1.5s;
+    box-shadow:
+        120px 120px white, 220px 170px white, 320px 70px white,
+        420px 220px white, 520px 120px white, 620px 270px white,
+        720px 70px white, 820px 170px white, 920px 220px white,
+        1020px 120px white, 70px 320px white, 170px 370px white,
+        270px 420px white, 370px 320px white, 470px 370px white,
+        570px 420px white, 670px 320px white, 770px 370px white,
+        870px 420px white, 970px 320px white, 1070px 370px white;
+}
+
+@keyframes stars-twinkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+/* =================================================================
+   Custom Gradient Text
+   ================================================================= */
+.gradient-text {
+    background: linear-gradient(135deg, #3713ec 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* =================================================================
+   Glass Morphism Effect
+   ================================================================= */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-hover:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(55, 19, 236, 0.5);
+}
+
+/* =================================================================
+   Card Hover Effects
+   ================================================================= */
+.card-3d {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-3d:hover {
+    transform: translateY(-8px) rotateX(2deg);
+    box-shadow: 0 20px 40px rgba(55, 19, 236, 0.3);
+}
+
+/* =================================================================
+   Loading Animation
+   ================================================================= */
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #3713ec;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* =================================================================
+   Pulse Animation for CTAs
+   ================================================================= */
+.pulse-glow {
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(55, 19, 236, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(55, 19, 236, 0.8);
+    }
+}
+
+/* =================================================================
+   Scroll Animations (Intersection Observer Compatible)
+   ================================================================= */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =================================================================
+   Mobile Menu Transition
+   ================================================================= */
+#mobile-menu {
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+#mobile-menu.show {
+    display: block;
+    max-height: 300px;
+}
+
+/* =================================================================
+   Star Rating Hover Effect
+   ================================================================= */
+.star-rating {
+    display: inline-flex;
+    gap: 2px;
+}
+
+.star-rating .material-symbols-outlined {
+    transition: transform 0.2s ease;
+}
+
+.star-rating:hover .material-symbols-outlined {
+    transform: scale(1.2);
+}
+
+/* =================================================================
+   Zodiac Card Shimmer Effect
+   ================================================================= */
+.zodiac-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.zodiac-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.zodiac-card:hover::before {
+    left: 100%;
+}
+
+/* =================================================================
+   Custom Scrollbar
+   ================================================================= */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #131022;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3713ec;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2a0eb8;
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3713ec #131022;
+}
+
+/* =================================================================
+   Responsive Video Embeds
+   ================================================================= */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* =================================================================
+   Backdrop Blur for Modals
+   ================================================================= */
+.modal-backdrop {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(19, 16, 34, 0.8);
+}
+
+/* =================================================================
+   Focus States for Accessibility
+   ================================================================= */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid #3713ec;
+    outline-offset: 2px;
+}
+
+/* =================================================================
+   Print Styles
+   ================================================================= */
+@media print {
+    header,
+    footer,
+    button,
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    main {
+        padding: 0;
+    }
+}
+
+/* =================================================================
+   Reduced Motion Preference
+   ================================================================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =================================================================
+   High Contrast Mode Support
+   ================================================================= */
+@media (prefers-contrast: high) {
+    button,
+    a {
+        text-decoration: underline;
+    }
+
+    .border-white\/10 {
+        border-color: rgba(255, 255, 255, 0.5) !important;
+    }
+}
+
+/* =================================================================
+   Utility Classes
+   ================================================================= */
+.text-shadow-glow {
+    text-shadow: 0 0 20px rgba(55, 19, 236, 0.6);
+}
+
+.backdrop-blur-strong {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.transition-all-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide element but keep accessible for screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* =================================================================
+   Dark Mode Enhancements
+   ================================================================= */
+.dark {
+    color-scheme: dark;
+}
+
+/* Selection color */
+::selection {
+    background: rgba(55, 19, 236, 0.5);
+    color: white;
+}
+
+::-moz-selection {
+    background: rgba(55, 19, 236, 0.5);
+    color: white;
+}
