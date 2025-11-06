@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your daily, weekly, and monthly horoscopes for all zodiac signs">
+    <title>Daily Horoscopes - AstroVerse</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;400;600" rel="stylesheet">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3713ec",
+                        "primary-dark": "#2a0eb8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#131022",
+                        "cosmic-purple": "#1a1333",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body class="bg-background-dark font-display antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="size-8 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-white text-xl md:text-2xl font-bold tracking-tight">AstroVerse</h1>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="../index.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Home</a>
+                    <a href="horoscopes.html" class="text-primary font-semibold text-sm">Horoscopes</a>
+                    <a href="readers.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Readers</a>
+                    <a href="#birth-chart" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Birth Chart</a>
+                    <a href="#blog" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Blog</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center gap-3">
+                    <button class="hidden sm:flex items-center justify-center px-6 py-2.5 bg-primary hover:bg-primary-dark text-white text-sm font-bold rounded-lg transition-colors">
+                        Log In
+                    </button>
+                    <button class="flex items-center justify-center px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white text-sm font-bold rounded-lg transition-colors">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen py-12 md:py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Page Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Your Daily Horoscope</h2>
+                <p class="text-lg text-white/70 max-w-2xl mx-auto">
+                    Select your zodiac sign to reveal what the stars have in store for you today.
+                </p>
+            </div>
+
+            <!-- Zodiac Sign Selector -->
+            <div class="mb-12">
+                <div class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-12 gap-4 max-w-5xl mx-auto">
+                    <!-- Aries -->
+                    <button onclick="selectZodiac('aries')" id="btn-aries" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♈
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Aries</p>
+                            <p class="text-white/60 text-xs">Mar 21 - Apr 19</p>
+                        </div>
+                    </button>
+
+                    <!-- Taurus -->
+                    <button onclick="selectZodiac('taurus')" id="btn-taurus" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♉
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Taurus</p>
+                            <p class="text-white/60 text-xs">Apr 20 - May 20</p>
+                        </div>
+                    </button>
+
+                    <!-- Gemini -->
+                    <button onclick="selectZodiac('gemini')" id="btn-gemini" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♊
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Gemini</p>
+                            <p class="text-white/60 text-xs">May 21 - Jun 20</p>
+                        </div>
+                    </button>
+
+                    <!-- Cancer -->
+                    <button onclick="selectZodiac('cancer')" id="btn-cancer" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♋
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Cancer</p>
+                            <p class="text-white/60 text-xs">Jun 21 - Jul 22</p>
+                        </div>
+                    </button>
+
+                    <!-- Leo -->
+                    <button onclick="selectZodiac('leo')" id="btn-leo" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♌
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Leo</p>
+                            <p class="text-white/60 text-xs">Jul 23 - Aug 22</p>
+                        </div>
+                    </button>
+
+                    <!-- Virgo -->
+                    <button onclick="selectZodiac('virgo')" id="btn-virgo" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♍
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Virgo</p>
+                            <p class="text-white/60 text-xs">Aug 23 - Sep 22</p>
+                        </div>
+                    </button>
+
+                    <!-- Libra -->
+                    <button onclick="selectZodiac('libra')" id="btn-libra" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♎
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Libra</p>
+                            <p class="text-white/60 text-xs">Sep 23 - Oct 22</p>
+                        </div>
+                    </button>
+
+                    <!-- Scorpio -->
+                    <button onclick="selectZodiac('scorpio')" id="btn-scorpio" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♏
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Scorpio</p>
+                            <p class="text-white/60 text-xs">Oct 23 - Nov 21</p>
+                        </div>
+                    </button>
+
+                    <!-- Sagittarius -->
+                    <button onclick="selectZodiac('sagittarius')" id="btn-sagittarius" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♐
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Sagittarius</p>
+                            <p class="text-white/60 text-xs">Nov 22 - Dec 21</p>
+                        </div>
+                    </button>
+
+                    <!-- Capricorn -->
+                    <button onclick="selectZodiac('capricorn')" id="btn-capricorn" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♑
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Capricorn</p>
+                            <p class="text-white/60 text-xs">Dec 22 - Jan 19</p>
+                        </div>
+                    </button>
+
+                    <!-- Aquarius -->
+                    <button onclick="selectZodiac('aquarius')" id="btn-aquarius" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♒
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Aquarius</p>
+                            <p class="text-white/60 text-xs">Jan 20 - Feb 18</p>
+                        </div>
+                    </button>
+
+                    <!-- Pisces -->
+                    <button onclick="selectZodiac('pisces')" id="btn-pisces" class="zodiac-btn flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-white/10 transition-all group">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center text-white text-2xl font-bold group-hover:scale-110 transition-transform">
+                            ♓
+                        </div>
+                        <div class="text-center">
+                            <p class="text-white text-sm font-semibold">Pisces</p>
+                            <p class="text-white/60 text-xs">Feb 19 - Mar 20</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Time Period Tabs -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex bg-white/5 rounded-lg p-1">
+                    <button onclick="selectPeriod('daily')" id="tab-daily" class="period-tab px-8 py-3 rounded-lg text-white font-semibold transition-all bg-white/10">
+                        Daily
+                    </button>
+                    <button onclick="selectPeriod('weekly')" id="tab-weekly" class="period-tab px-8 py-3 rounded-lg text-white/60 font-semibold transition-all hover:text-white">
+                        Weekly
+                    </button>
+                    <button onclick="selectPeriod('monthly')" id="tab-monthly" class="period-tab px-8 py-3 rounded-lg text-white/60 font-semibold transition-all hover:text-white">
+                        Monthly
+                    </button>
+                </div>
+            </div>
+
+            <!-- Horoscope Content -->
+            <div id="horoscope-content" class="max-w-3xl mx-auto">
+                <!-- This will be populated by JavaScript -->
+                <div class="text-center text-white/60 py-20">
+                    <span class="material-symbols-outlined text-6xl mb-4">auto_awesome</span>
+                    <p class="text-lg">Select a zodiac sign to view your horoscope</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/10 py-8 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/60 text-sm">&copy; 2024 AstroVerse. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#about" class="text-white/60 hover:text-white text-sm transition-colors">About Us</a>
+                    <a href="#contact" class="text-white/60 hover:text-white text-sm transition-colors">Contact</a>
+                    <a href="#privacy" class="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Horoscope data
+        const horoscopes = {
+            daily: {
+                aries: "Today brings a burst of creative energy your way! It's an excellent time to tackle new projects or revisit old passions. Trust your instincts in personal matters, and don't shy away from expressing your authentic self.",
+                taurus: "You'll feel a surge of creative energy. It's an excellent day to tackle artistic projects or brainstorm new ideas at work. Your intuition is heightened, so trust your gut feelings, especially in personal relationships.",
+                gemini: "Communication flows effortlessly today. It's a perfect time for important conversations, negotiations, or connecting with loved ones. Your charm is at its peak, making it easy to win people over.",
+                cancer: "Focus on self-care and emotional well-being today. Take time to nurture yourself and your closest relationships. A quiet evening at home will recharge your batteries for the week ahead.",
+                leo: "Your natural charisma shines bright today! It's an excellent time for social gatherings, creative pursuits, or taking center stage. Don't be afraid to showcase your talents and share your ideas.",
+                virgo: "Organization and productivity are your superpowers today. Tackle that to-do list with confidence. Your attention to detail will be appreciated by others, especially in professional settings.",
+                libra: "Balance and harmony are within reach. Focus on relationships and finding middle ground in any conflicts. Your diplomatic skills will help smooth over any rough patches.",
+                scorpio: "Intense emotions may surface today, but they'll lead to important insights. Trust the transformation process and don't resist change. Your intuition is particularly strong right now.",
+                sagittarius: "Adventure calls! Whether it's a physical journey or exploring new ideas, embrace the unfamiliar. Your optimism and enthusiasm are contagious and will attract positive opportunities.",
+                capricorn: "Your disciplined approach pays off today. Focus on long-term goals and take practical steps toward your ambitions. Recognition for your hard work may come from unexpected sources.",
+                aquarius: "Innovation and original thinking are your strengths today. Don't be afraid to break from tradition or suggest unconventional solutions. Your unique perspective is exactly what's needed.",
+                pisces: "Your empathy and intuition are heightened. You'll be able to sense what others need before they ask. Use this gift to strengthen relationships and offer support where it's needed most."
+            },
+            weekly: {
+                aries: "This week emphasizes new beginnings and bold initiatives. Monday through Wednesday are ideal for launching projects. Mid-week brings opportunities for romance or creative expression. Weekend focus shifts to home and family matters.",
+                taurus: "Financial matters take center stage this week. Early week is perfect for budgeting and planning. Wednesday's new moon brings fresh perspectives on personal values. Weekend encourages social connections and networking.",
+                gemini: "Communication is your superpower this week. Important conversations happen Monday and Tuesday. Mid-week perfect for negotiations and presentations. Weekend brings opportunities for learning and travel planning.",
+                cancer: "Emotional depth and intuition guide you this week. Early week focuses on inner work and reflection. Wednesday brings clarity about personal goals. Weekend highlights social activities and community involvement.",
+                leo: "Creative projects flourish this week. Start strong on Monday with artistic pursuits. Mid-week brings recognition for your efforts. Weekend perfect for romance and entertainment.",
+                virgo: "Organization and efficiency are key themes. Use Monday and Tuesday to clear clutter. Mid-week brings breakthrough insights for problem-solving. Weekend encourages rest and rejuvenation.",
+                libra: "Relationships take center stage. Early week perfect for important discussions with partners. Wednesday brings harmony and balance. Weekend highlights social gatherings and artistic pursuits.",
+                scorpio: "Transformation continues this week. Monday starts with intense energy for change. Mid-week brings emotional breakthroughs. Weekend encourages spiritual practices and self-reflection.",
+                sagittarius: "Adventure and expansion are highlighted. Early week brings travel opportunities or new learning. Wednesday opens doors to exciting possibilities. Weekend perfect for philosophical discussions.",
+                capricorn: "Professional advancement is favored. Monday and Tuesday ideal for career moves. Mid-week brings recognition from superiors. Weekend focuses on personal projects and hobbies.",
+                aquarius: "Innovation and social causes are emphasized. Early week perfect for group activities. Wednesday brings breakthrough ideas. Weekend encourages one-on-one connections.",
+                pisces: "Intuition and creativity flow abundantly. Monday starts with artistic inspiration. Mid-week brings emotional clarity. Weekend highlights spiritual growth and meditation."
+            },
+            monthly: {
+                aries: "November brings opportunities for personal growth and new adventures. Early month focuses on career advancement. Mid-month highlights relationships and partnerships. Month ends with financial improvements and resource management.",
+                taurus: "This month emphasizes stability and building lasting foundations. First two weeks perfect for financial planning. Mid-month brings romantic opportunities. Final weeks focus on creative projects and self-expression.",
+                gemini: "Communication and learning are monthly themes. Early November ideal for courses and workshops. Mid-month brings important negotiations. Month closes with social expansion and networking success.",
+                cancer: "Emotional growth and home matters dominate. First half focuses on family relationships. Mid-month brings career recognition. Month ends with personal revelations and self-care priorities.",
+                leo: "Creative expression and romance are highlighted. Early month brings artistic breakthroughs. Mid-November focuses on partnerships. Month concludes with professional achievements and public recognition.",
+                virgo: "Health and daily routines take center stage. First two weeks ideal for wellness improvements. Mid-month brings work efficiency. Final weeks highlight relationships and collaboration.",
+                libra: "Balance and harmony guide this month. Early November focuses on partnerships. Mid-month brings creative opportunities. Month ends with health improvements and practical matters.",
+                scorpio: "Transformation and intensity mark this month. First half brings deep emotional insights. Mid-month highlights financial matters. Month concludes with social expansion and new connections.",
+                sagittarius: "Expansion and adventure dominate November. Early month brings travel opportunities. Mid-month focuses on learning and education. Final weeks emphasize home and family matters.",
+                capricorn: "Professional success and recognition are featured. First two weeks bring career advancement. Mid-November highlights financial gains. Month ends with creative projects and social activities.",
+                aquarius: "Innovation and community involvement shine. Early month focuses on group activities. Mid-month brings unexpected opportunities. Final weeks emphasize personal relationships and romance.",
+                pisces: "Spiritual growth and intuition deepen this month. First half brings creative inspiration. Mid-November focuses on finances. Month concludes with important relationships and partnerships."
+            }
+        };
+
+        let currentSign = 'taurus';
+        let currentPeriod = 'daily';
+
+        function selectZodiac(sign) {
+            currentSign = sign;
+            updateHoroscope();
+
+            // Update UI
+            document.querySelectorAll('.zodiac-btn').forEach(btn => {
+                btn.classList.remove('bg-primary', 'bg-white/10');
+                btn.classList.add('hover:bg-white/10');
+            });
+            const btn = document.getElementById(`btn-${sign}`);
+            btn.classList.add('bg-primary');
+            btn.classList.remove('hover:bg-white/10');
+        }
+
+        function selectPeriod(period) {
+            currentPeriod = period;
+            updateHoroscope();
+
+            // Update tabs
+            document.querySelectorAll('.period-tab').forEach(tab => {
+                tab.classList.remove('bg-white/10', 'text-white');
+                tab.classList.add('text-white/60');
+            });
+            const tab = document.getElementById(`tab-${period}`);
+            tab.classList.add('bg-white/10', 'text-white');
+            tab.classList.remove('text-white/60');
+        }
+
+        function updateHoroscope() {
+            const content = document.getElementById('horoscope-content');
+            const horoscope = horoscopes[currentPeriod][currentSign];
+            const signName = currentSign.charAt(0).toUpperCase() + currentSign.slice(1);
+            const date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+            let periodTitle = 'Daily';
+            if (currentPeriod === 'weekly') periodTitle = 'Weekly';
+            if (currentPeriod === 'monthly') periodTitle = 'Monthly';
+
+            content.innerHTML = `
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10">
+                    <h3 class="text-3xl font-bold text-white mb-2">${signName} ${periodTitle} Horoscope</h3>
+                    <p class="text-white/60 mb-6">${date}</p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">Love</span>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-semibold rounded-full">Career</span>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-semibold rounded-full">Money</span>
+                    </div>
+
+                    <p class="text-white/90 text-lg leading-relaxed mb-8">${horoscope}</p>
+
+                    <button onclick="shareHoroscope()" class="flex items-center gap-2 px-6 py-3 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors">
+                        <span class="material-symbols-outlined">share</span>
+                        Share
+                    </button>
+                </div>
+            `;
+        }
+
+        function shareHoroscope() {
+            if (navigator.share) {
+                navigator.share({
+                    title: `${currentSign.charAt(0).toUpperCase() + currentSign.slice(1)} ${currentPeriod} Horoscope`,
+                    text: horoscopes[currentPeriod][currentSign],
+                    url: window.location.href
+                }).catch(err => console.log('Error sharing:', err));
+            } else {
+                // Fallback: copy to clipboard
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('Link copied to clipboard!');
+                });
+            }
+        }
+
+        // Check URL for sign parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const signParam = urlParams.get('sign');
+        if (signParam && horoscopes.daily[signParam]) {
+            selectZodiac(signParam);
+        } else {
+            selectZodiac('taurus'); // Default
+        }
+    </script>
+</body>
+</html>

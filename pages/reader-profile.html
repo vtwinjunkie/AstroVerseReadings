@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a reading with professional astrologers on AstroVerse">
+    <title>Reader Profile - AstroVerse</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200;400;600" rel="stylesheet">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3713ec",
+                        "primary-dark": "#2a0eb8",
+                        "background-dark": "#131022",
+                    },
+                    fontFamily: {
+                        display: ["Space Grotesk", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <link rel="stylesheet" href="../assets/css/custom.css">
+</head>
+<body class="bg-background-dark font-display antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-md border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <div class="size-8 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h1 class="text-white text-xl md:text-2xl font-bold">AstroVerse</h1>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="../index.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Home</a>
+                    <a href="horoscopes.html" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Horoscopes</a>
+                    <a href="readers.html" class="text-primary font-semibold text-sm">Readers</a>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button class="px-6 py-2.5 bg-primary hover:bg-primary-dark text-white text-sm font-bold rounded-lg transition-colors">
+                        Sign Up
+                    </button>
+                    <button class="hidden sm:flex px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white text-sm font-bold rounded-lg transition-colors">
+                        Log In
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="min-h-screen py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Profile Header -->
+            <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-white/10">
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
+                         alt="Elara Vance"
+                         class="w-32 h-32 rounded-full object-cover border-4 border-primary/30">
+
+                    <div class="flex-1">
+                        <h2 class="text-3xl font-bold text-white mb-2">Elara Vance</h2>
+                        <p class="text-white/80 mb-3">Tarot Reader & Astrologer. Guiding you through life's cosmic currents.</p>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="text-amber-400 text-lg">★</span>
+                                <span class="text-white font-semibold">4.9</span>
+                                <span class="text-white/60">(212 Reviews)</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-primary">
+                                <span class="material-symbols-outlined text-lg">verified</span>
+                                <span class="text-sm font-semibold">Verified Professional</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <button class="px-8 py-3 bg-primary hover:bg-primary-dark text-white font-bold rounded-lg transition-colors">
+                            Book Now
+                        </button>
+                        <button class="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-bold rounded-lg transition-colors">
+                            Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:col-span-1">
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 sticky top-24">
+                        <!-- Expertise -->
+                        <div class="mb-6">
+                            <h3 class="text-white font-bold mb-3">Expertise</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm font-semibold rounded-full">Tarot & Divination</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm font-semibold rounded-full">Love & Relationships</span>
+                                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 text-sm font-semibold rounded-full">Natal Charts</span>
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm font-semibold rounded-full">Work</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-semibold rounded-full">Career Forecast</span>
+                            </div>
+                        </div>
+
+                        <!-- Languages -->
+                        <div class="mb-6">
+                            <h3 class="text-white font-bold mb-2">Languages</h3>
+                            <p class="text-white/70">English, Spanish</p>
+                        </div>
+
+                        <!-- Member Since -->
+                        <div>
+                            <h3 class="text-white font-bold mb-2">Member Since</h3>
+                            <p class="text-white/70">2018</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Tabs -->
+                    <div class="flex gap-6 border-b border-white/10 mb-8">
+                        <button class="pb-4 text-white font-semibold border-b-2 border-primary">About</button>
+                        <button class="pb-4 text-white/60 hover:text-white font-semibold">Services</button>
+                        <button class="pb-4 text-white/60 hover:text-white font-semibold">Availability</button>
+                        <button class="pb-4 text-white/60 hover:text-white font-semibold">Reviews (212)</button>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-8 border border-white/10">
+                        <h3 class="text-2xl font-bold text-white mb-4">About Elara</h3>
+                        <div class="text-white/80 space-y-4 leading-relaxed">
+                            <p>With over 15 years of experience, Elara combines ancient astrological wisdom with intuitive tarot readings to provide clarity and guidance. Her approach is rooted in compassion and a deep understanding of cosmic patterns, helping clients navigate their life paths with confidence and purpose. She believes that the stars offer a roadmap, but we hold the power to choose our direction.</p>
+                            <p>Whether you're facing a challenging decision, seeking insight into your relationships, or simply curious about what the future holds, Elara provides a safe and supportive space for exploration and discovery.</p>
+                        </div>
+                    </div>
+
+                    <!-- Services & Pricing -->
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-white mb-6">Services & Pricing</h3>
+                        <div class="space-y-4">
+                            <!-- Service 1 -->
+                            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex items-center justify-between hover:border-primary/50 transition-all">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-white mb-2">Natal Chart Reading</h4>
+                                    <p class="text-white/70 mb-2">A deep dive into your birth chart. (60 min)</p>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <p class="text-2xl font-bold text-white">$150</p>
+                                    <button class="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors">
+                                        Select
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Service 2 -->
+                            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex items-center justify-between hover:border-primary/50 transition-all">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-white mb-2">Tarot Reading</h4>
+                                    <p class="text-white/70 mb-2">Insight on a specific question or area of life. (30 min)</p>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <p class="text-2xl font-bold text-white">$75</p>
+                                    <button class="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors">
+                                        Select
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Service 3 -->
+                            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 flex items-center justify-between hover:border-primary/50 transition-all">
+                                <div class="flex-1">
+                                    <h4 class="text-xl font-bold text-white mb-2">Couples Synastry Reading</h4>
+                                    <p class="text-white/70 mb-2">Explore the dynamics of your relationship. (90 min)</p>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <p class="text-2xl font-bold text-white">$225</p>
+                                    <button class="px-6 py-2 bg-primary hover:bg-primary-dark text-white font-semibold rounded-lg transition-colors">
+                                        Select
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Client Reviews -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-6">Client Reviews</h3>
+                        <div class="space-y-4">
+                            <!-- Review 1 -->
+                            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <img src="https://i.pravatar.cc/150?img=12" alt="Alex Johnson"
+                                         class="w-12 h-12 rounded-full">
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <h4 class="text-white font-bold">Alex Johnson</h4>
+                                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                                        </div>
+                                        <p class="text-white/60 text-sm">September 15, 2024</p>
+                                    </div>
+                                </div>
+                                <p class="text-white/80">"Elara's reading was incredibly insightful and accurate. She provided so much clarity on my career path, and I left the session feeling empowered and confident. Highly recommend!"</p>
+                            </div>
+
+                            <!-- Review 2 -->
+                            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <img src="https://i.pravatar.cc/150?img=45" alt="Samantha Lee"
+                                         class="w-12 h-12 rounded-full">
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <h4 class="text-white font-bold">Samantha Lee</h4>
+                                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                                        </div>
+                                        <p class="text-white/60 text-sm">August 28, 2024</p>
+                                    </div>
+                                </div>
+                                <p class="text-white/80">"A truly wonderful experience. Elara is compassionate and her guidance on my relationship was spot on. While some parts were hard to hear, it was exactly what I needed. Thank you!"</p>
+                            </div>
+
+                            <!-- Review 3 -->
+                            <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                                <div class="flex items-start gap-4 mb-4">
+                                    <img src="https://i.pravatar.cc/150?img=33" alt="Michael Chen"
+                                         class="w-12 h-12 rounded-full">
+                                    <div class="flex-1">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <h4 class="text-white font-bold">Michael Chen</h4>
+                                            <div class="flex text-amber-400 text-sm">★★★★★</div>
+                                        </div>
+                                        <p class="text-white/60 text-sm">July 10, 2024</p>
+                                    </div>
+                                </div>
+                                <p class="text-white/80">"Professional, insightful, and genuinely caring. Elara helped me understand patterns in my life I hadn't recognized before. I'm grateful for the clarity and direction she provided."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-dark border-t border-white/10 py-8 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-white/60 text-sm">&copy; 2024 AstroVerse. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#about" class="text-white/60 hover:text-white text-sm transition-colors">About Us</a>
+                    <a href="#contact" class="text-white/60 hover:text-white text-sm transition-colors">Contact</a>
+                    <a href="#privacy" class="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
